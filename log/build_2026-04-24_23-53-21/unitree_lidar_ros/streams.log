@@ -1,0 +1,84 @@
+[0.545s] Invoking command in '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/unitree_lidar_ros': /usr/bin/cmake /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/unilidar_sdk2/unitree_lidar_ros/src/unitree_lidar_ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/unitree_lidar_ros
+[0.568s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.568s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[0.568s]   CMake.
+[0.568s] 
+[0.569s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.569s]   CMake that the project does not need compatibility with older versions.
+[0.569s] 
+[0.569s] [0m
+[0.666s] -- The C compiler identification is GNU 11.4.0
+[0.769s] -- The CXX compiler identification is GNU 11.4.0
+[0.788s] -- Detecting C compiler ABI info
+[0.931s] -- Detecting C compiler ABI info - done
+[0.955s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.957s] -- Detecting C compile features
+[0.959s] -- Detecting C compile features - done
+[0.970s] -- Detecting CXX compiler ABI info
+[1.140s] -- Detecting CXX compiler ABI info - done
+[1.156s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.156s] -- Detecting CXX compile features
+[1.157s] -- Detecting CXX compile features - done
+[1.187s] -- Checking for module 'eigen3'
+[1.209s] --   Found eigen3, version 3.4.0
+[1.261s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[1.261s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.329s] -- Checking for module 'flann'
+[1.372s] --   Found flann, version 1.9.1
+[1.644s] -- Found FLANN: /usr/lib/aarch64-linux-gnu/libflann_cpp.so  
+[1.645s] -- FLANN found (include: /usr/include, lib: /usr/lib/aarch64-linux-gnu/libflann_cpp.so)
+[4.508s] -- Checking for module 'libusb-1.0'
+[4.532s] --   Found libusb-1.0, version 1.0.25
+[4.599s] -- Found libusb: /usr/lib/aarch64-linux-gnu/libusb-1.0.so  
+[4.601s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[4.704s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[4.978s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[4.988s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[4.998s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[5.251s] -- Found Qhull version 8.0.2
+[5.502s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[5.745s] -- Found PCL_COMMON: /usr/lib/aarch64-linux-gnu/libpcl_common.so  
+[5.746s] -- Found PCL_KDTREE: /usr/lib/aarch64-linux-gnu/libpcl_kdtree.so  
+[5.748s] -- Found PCL_OCTREE: /usr/lib/aarch64-linux-gnu/libpcl_octree.so  
+[5.749s] -- Found PCL_SEARCH: /usr/lib/aarch64-linux-gnu/libpcl_search.so  
+[5.750s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/aarch64-linux-gnu/libpcl_sample_consensus.so  
+[5.752s] -- Found PCL_FILTERS: /usr/lib/aarch64-linux-gnu/libpcl_filters.so  
+[5.752s] -- Found PCL_2D: /usr/include/pcl-1.12  
+[5.753s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.12  
+[5.754s] -- Found PCL_IO: /usr/lib/aarch64-linux-gnu/libpcl_io.so  
+[5.756s] -- Found PCL_FEATURES: /usr/lib/aarch64-linux-gnu/libpcl_features.so  
+[5.757s] -- Found PCL_ML: /usr/lib/aarch64-linux-gnu/libpcl_ml.so  
+[5.759s] -- Found PCL_SEGMENTATION: /usr/lib/aarch64-linux-gnu/libpcl_segmentation.so  
+[5.760s] -- Found PCL_VISUALIZATION: /usr/lib/aarch64-linux-gnu/libpcl_visualization.so  
+[5.762s] -- Found PCL_SURFACE: /usr/lib/aarch64-linux-gnu/libpcl_surface.so  
+[5.764s] -- Found PCL_REGISTRATION: /usr/lib/aarch64-linux-gnu/libpcl_registration.so  
+[5.766s] -- Found PCL_KEYPOINTS: /usr/lib/aarch64-linux-gnu/libpcl_keypoints.so  
+[5.767s] -- Found PCL_TRACKING: /usr/lib/aarch64-linux-gnu/libpcl_tracking.so  
+[5.769s] -- Found PCL_RECOGNITION: /usr/lib/aarch64-linux-gnu/libpcl_recognition.so  
+[5.770s] -- Found PCL_STEREO: /usr/lib/aarch64-linux-gnu/libpcl_stereo.so  
+[5.772s] -- Found PCL_APPS: /usr/lib/aarch64-linux-gnu/libpcl_apps.so  
+[5.773s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  
+[5.774s] -- Found PCL_MODELER: /usr/include/pcl-1.12  
+[5.774s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  
+[5.776s] -- Found PCL_OUTOFCORE: /usr/lib/aarch64-linux-gnu/libpcl_outofcore.so  
+[5.777s] -- Found PCL_PEOPLE: /usr/lib/aarch64-linux-gnu/libpcl_people.so  
+[5.796s] [31mCMake Error at CMakeLists.txt:11 (find_package):
+[5.796s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[5.796s]   asked CMake to find a package configuration file provided by "catkin", but
+[5.796s]   CMake did not find one.
+[5.796s] 
+[5.796s]   Could not find a package configuration file provided by "catkin" with any
+[5.797s]   of the following names:
+[5.797s] 
+[5.797s]     catkinConfig.cmake
+[5.797s]     catkin-config.cmake
+[5.797s] 
+[5.797s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[5.797s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[5.797s]   provides a separate development package or SDK, be sure it has been
+[5.797s]   installed.
+[5.797s] 
+[5.798s] [0m
+[5.798s] -- Configuring incomplete, errors occurred!
+[5.798s] See also "/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/unitree_lidar_ros/CMakeFiles/CMakeOutput.log".
+[5.829s] Invoked command in '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/unitree_lidar_ros' returned '1': /usr/bin/cmake /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/unilidar_sdk2/unitree_lidar_ros/src/unitree_lidar_ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/unitree_lidar_ros

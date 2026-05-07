@@ -1,0 +1,5 @@
+[ 20%] Built target example_lidar_udp
+[ 40%] Built target example_lidar_serial
+[ 60%] Built target set_to_serial_mode
+[ 80%] Built target set_ip_address
+[100%] Built target set_to_udp_mode

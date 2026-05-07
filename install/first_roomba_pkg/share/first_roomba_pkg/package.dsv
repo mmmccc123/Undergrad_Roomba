@@ -1,0 +1,6 @@
+source;share/first_roomba_pkg/hook/pythonpath.ps1
+source;share/first_roomba_pkg/hook/pythonpath.dsv
+source;share/first_roomba_pkg/hook/pythonpath.sh
+source;share/first_roomba_pkg/hook/ament_prefix_path.ps1
+source;share/first_roomba_pkg/hook/ament_prefix_path.dsv
+source;share/first_roomba_pkg/hook/ament_prefix_path.sh

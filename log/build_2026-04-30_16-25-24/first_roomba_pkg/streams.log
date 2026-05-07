@@ -1,0 +1,46 @@
+[1.366s] Invoking command in '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg': PYTHONPATH=/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build
+[1.857s] running develop
+[2.182s] Removing /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first-roomba-pkg.egg-link (link to .)
+[2.258s] Invoked command in '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg' returned '0': PYTHONPATH=/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build
+[2.264s] Invoking command in '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/first_roomba_pkg': PYTHONPATH=/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/first_roomba_pkg build --build-base /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build install --record /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/install.log --single-version-externally-managed install_data --force
+[2.721s] running egg_info
+[2.722s] writing ../../build/first_roomba_pkg/first_roomba_pkg.egg-info/PKG-INFO
+[2.723s] writing dependency_links to ../../build/first_roomba_pkg/first_roomba_pkg.egg-info/dependency_links.txt
+[2.723s] writing entry points to ../../build/first_roomba_pkg/first_roomba_pkg.egg-info/entry_points.txt
+[2.723s] writing requirements to ../../build/first_roomba_pkg/first_roomba_pkg.egg-info/requires.txt
+[2.723s] writing top-level names to ../../build/first_roomba_pkg/first_roomba_pkg.egg-info/top_level.txt
+[2.727s] reading manifest file '../../build/first_roomba_pkg/first_roomba_pkg.egg-info/SOURCES.txt'
+[2.727s] adding license file 'LICENSE'
+[2.728s] writing manifest file '../../build/first_roomba_pkg/first_roomba_pkg.egg-info/SOURCES.txt'
+[2.729s] running build
+[2.729s] running build_py
+[2.729s] copying first_roomba_pkg/driver_node.py -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build/lib/first_roomba_pkg
+[2.730s] copying first_roomba_pkg/lidar_node.py -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build/lib/first_roomba_pkg
+[2.730s] copying first_roomba_pkg/xbox_controller_node.py -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build/lib/first_roomba_pkg
+[2.730s] running install
+[2.731s] running install_lib
+[2.733s] creating /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg
+[2.733s] copying /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build/lib/first_roomba_pkg/driver_node.py -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg
+[2.733s] copying /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build/lib/first_roomba_pkg/__init__.py -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg
+[2.734s] copying /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build/lib/first_roomba_pkg/lidar_node.py -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg
+[2.734s] copying /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build/lib/first_roomba_pkg/xbox_controller_node.py -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg
+[2.734s] copying /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build/lib/first_roomba_pkg/camera_node.py -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg
+[2.735s] byte-compiling /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg/driver_node.py to driver_node.cpython-310.pyc
+[2.737s] byte-compiling /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg/__init__.py to __init__.cpython-310.pyc
+[2.738s] byte-compiling /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg/lidar_node.py to lidar_node.cpython-310.pyc
+[2.739s] byte-compiling /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg/xbox_controller_node.py to xbox_controller_node.cpython-310.pyc
+[2.739s] byte-compiling /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg/camera_node.py to camera_node.cpython-310.pyc
+[2.740s] running install_data
+[2.740s] copying resource/first_roomba_pkg -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/share/ament_index/resource_index/packages
+[2.741s] copying package.xml -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/share/first_roomba_pkg
+[2.741s] copying launch/rtabmap_launch.py -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/share/first_roomba_pkg/launch
+[2.741s] copying config/rtabmap_params.yaml -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/share/first_roomba_pkg/config
+[2.742s] running install_egg_info
+[2.744s] Copying ../../build/first_roomba_pkg/first_roomba_pkg.egg-info to /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg-0.0.1-py3.10.egg-info
+[2.747s] running install_scripts
+[2.783s] Installing camera_node script to /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/first_roomba_pkg
+[2.783s] Installing driver_node script to /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/first_roomba_pkg
+[2.783s] Installing lidar_node script to /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/first_roomba_pkg
+[2.784s] Installing xbox_controller_node script to /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/first_roomba_pkg
+[2.784s] writing list of installed files to '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/install.log'
+[2.851s] Invoked command in '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/first_roomba_pkg' returned '0': PYTHONPATH=/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/first_roomba_pkg build --build-base /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build install --record /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/install.log --single-version-externally-managed install_data --force

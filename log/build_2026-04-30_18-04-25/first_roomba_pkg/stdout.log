@@ -1,0 +1,26 @@
+running egg_info
+writing ../../build/first_roomba_pkg/first_roomba_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/first_roomba_pkg/first_roomba_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/first_roomba_pkg/first_roomba_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/first_roomba_pkg/first_roomba_pkg.egg-info/requires.txt
+writing top-level names to ../../build/first_roomba_pkg/first_roomba_pkg.egg-info/top_level.txt
+reading manifest file '../../build/first_roomba_pkg/first_roomba_pkg.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/first_roomba_pkg/first_roomba_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/rtabmap_launch.py -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/share/first_roomba_pkg/launch
+creating /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/share/first_roomba_pkg/rviz
+copying rviz/rtabmap_rviz.rviz -> /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/share/first_roomba_pkg/rviz
+running install_egg_info
+removing '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/first_roomba_pkg/first_roomba_pkg.egg-info to /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first_roomba_pkg-0.0.1-py3.10.egg-info
+running install_scripts
+Installing camera_node script to /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/first_roomba_pkg
+Installing driver_node script to /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/first_roomba_pkg
+Installing lidar_node script to /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/first_roomba_pkg
+Installing xbox_controller_node script to /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/first_roomba_pkg
+writing list of installed files to '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/install.log'

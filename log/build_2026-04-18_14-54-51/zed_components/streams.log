@@ -1,0 +1,21 @@
+[0.024s] Invoking command in '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_components': CMAKE_PREFIX_PATH=/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble /usr/bin/cmake /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components
+[0.056s] -- Found nlohmann_json: /usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake (found version "3.10.5") 
+[0.075s] [31mCMake Error at CMakeLists.txt:85 (find_package):
+[0.075s]   By not providing "FindZED.cmake" in CMAKE_MODULE_PATH this project has
+[0.075s]   asked CMake to find a package configuration file provided by "ZED", but
+[0.075s]   CMake did not find one.
+[0.075s] 
+[0.075s]   Could not find a package configuration file provided by "ZED" with any of
+[0.075s]   the following names:
+[0.076s] 
+[0.076s]     ZEDConfig.cmake
+[0.076s]     zed-config.cmake
+[0.076s] 
+[0.076s]   Add the installation prefix of "ZED" to CMAKE_PREFIX_PATH or set "ZED_DIR"
+[0.076s]   to a directory containing one of the above files.  If "ZED" provides a
+[0.076s]   separate development package or SDK, be sure it has been installed.
+[0.076s] 
+[0.076s] [0m
+[0.077s] -- Configuring incomplete, errors occurred!
+[0.077s] See also "/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_components/CMakeFiles/CMakeOutput.log".
+[0.524s] Invoked command in '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_components' returned '1': CMAKE_PREFIX_PATH=/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble /usr/bin/cmake /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components

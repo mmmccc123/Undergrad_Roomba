@@ -1,0 +1,6 @@
+[console_scripts]
+camera_node = first_roomba_pkg.camera_node:main
+driver_node = first_roomba_pkg.driver_node:main
+lidar_node = first_roomba_pkg.lidar_node:main
+xbox_controller_node = first_roomba_pkg.xbox_controller_node:main
+

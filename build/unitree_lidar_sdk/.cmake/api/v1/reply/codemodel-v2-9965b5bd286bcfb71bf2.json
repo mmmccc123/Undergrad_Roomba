@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "unitree_lidar_sdk",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "example_lidar_serial::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-example_lidar_serial-Release-9c5ae79dd8ed6a6ab247.json",
+					"name" : "example_lidar_serial",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "example_lidar_udp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-example_lidar_udp-Release-37b730d53ddf360de955.json",
+					"name" : "example_lidar_udp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "set_ip_address::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-set_ip_address-Release-55b9ef1414405fe79318.json",
+					"name" : "set_ip_address",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "set_to_serial_mode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-set_to_serial_mode-Release-aecb821d9388e6bc3354.json",
+					"name" : "set_to_serial_mode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "set_to_udp_mode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-set_to_udp_mode-Release-ad991310ed07c37f8d10.json",
+					"name" : "set_to_udp_mode",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/unitree_lidar_sdk",
+		"source" : "/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/unilidar_sdk2/unitree_lidar_sdk"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

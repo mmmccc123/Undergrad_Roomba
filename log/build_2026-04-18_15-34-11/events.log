@@ -1,0 +1,1886 @@
+[0.000000] (-) TimerEvent: {}
+[0.000832] (first_roomba_pkg) JobQueued: {'identifier': 'first_roomba_pkg', 'dependencies': OrderedDict()}
+[0.001058] (zed_components) JobQueued: {'identifier': 'zed_components', 'dependencies': OrderedDict()}
+[0.001146] (zed_wrapper) JobQueued: {'identifier': 'zed_wrapper', 'dependencies': OrderedDict([('zed_components', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components')])}
+[0.001319] (zed_ros2) JobQueued: {'identifier': 'zed_ros2', 'dependencies': OrderedDict([('zed_components', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components'), ('zed_wrapper', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper')])}
+[0.001406] (zed_components) JobStarted: {'identifier': 'zed_components'}
+[0.011513] (first_roomba_pkg) JobStarted: {'identifier': 'first_roomba_pkg'}
+[0.022266] (zed_components) JobProgress: {'identifier': 'zed_components', 'progress': 'cmake'}
+[0.023706] (zed_components) JobProgress: {'identifier': 'zed_components', 'progress': 'build'}
+[0.024909] (zed_components) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_components', '--', '-j6', '-l6'], 'cwd': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_components', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'wolfwagen'), ('SSH_CLIENT', '10.152.58.3 60231 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('BROWSER', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/wolfwagen'), ('OLDPWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1'), ('TERM_PROGRAM_VERSION', '1.107.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-57d3707e-17ca-4fb3-bfb1-3eb739ef94bd.sock'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'wolfwagen'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422425022489'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '91'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.6/bin:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e72b36d3c5.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_components'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.152.58.3 60231 10.152.19.83 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/wolfwagen/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble')]), 'shell': False}
+[0.099233] (-) TimerEvent: {}
+[0.144661] (zed_components) StdoutLine: {'line': b'-- Found CUDA: /usr/local/cuda-12.6 (found suitable version "12.6", minimum required is "12.6") \n'}
+[0.177545] (zed_components) StdoutLine: {'line': b'-- Found CUDA: /usr/local/cuda-12.6 (found version "12.6") \n'}
+[0.179072] (zed_components) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.14 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[0.199375] (-) TimerEvent: {}
+[0.300016] (-) TimerEvent: {}
+[0.400701] (-) TimerEvent: {}
+[0.428753] (zed_components) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.500872] (-) TimerEvent: {}
+[0.601475] (-) TimerEvent: {}
+[0.629773] (zed_components) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.635131] (zed_components) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.647371] (zed_components) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.664285] (zed_components) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.684818] (zed_components) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.701575] (-) TimerEvent: {}
+[0.802124] (-) TimerEvent: {}
+[0.830145] (zed_components) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.832336] (zed_components) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.902265] (-) TimerEvent: {}
+[0.999433] (zed_components) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.002345] (-) TimerEvent: {}
+[1.102836] (-) TimerEvent: {}
+[1.203459] (-) TimerEvent: {}
+[1.263354] (first_roomba_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/build', '--no-deps', 'symlink_data'], 'cwd': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'wolfwagen', 'SSH_CLIENT': '10.152.58.3 60231 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:', 'BROWSER': '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/wolfwagen', 'OLDPWD': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1', 'TERM_PROGRAM_VERSION': '1.107.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-57d3707e-17ca-4fb3-bfb1-3eb739ef94bd.sock', 'JETSON_L4T': '36.4.7', 'ROS_PYTHON_VERSION': '3', 'JETSON_MODEL': 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super', 'VSCODE_GIT_ASKPASS_MAIN': '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/humble/', 'COLCON_PREFIX_PATH': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'wolfwagen', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1422425022489', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '91', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/usr/local/cuda-12.6/bin:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra234', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-e72b36d3c5.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.152.58.3 60231 10.152.19.83 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/wolfwagen/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'JETSON_JETPACK': '', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[1.303579] (-) TimerEvent: {}
+[1.347666] (zed_components) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.349864] (zed_components) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.403712] (-) TimerEvent: {}
+[1.504581] (-) TimerEvent: {}
+[1.538123] (zed_components) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.592486] (zed_components) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.595453] (zed_components) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.596415] (zed_components) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/include;/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/zed_camera/include;/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/tools/include\n'}
+[1.596580] (zed_components) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.597582] (zed_components) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.600720] (zed_components) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.600899] (zed_components) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.601544] (zed_components) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.604626] (-) TimerEvent: {}
+[1.608227] (zed_components) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.675086] (zed_components) StdoutLine: {'line': b'-- Generating done\n'}
+[1.694504] (zed_components) StdoutLine: {'line': b'-- Build files have been written to: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_components\n'}
+[1.704752] (-) TimerEvent: {}
+[1.757845] (zed_components) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target zed_camera_component\x1b[0m\n'}
+[1.759260] (zed_components) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target zed_camera_one_component\x1b[0m\n'}
+[1.764076] (first_roomba_pkg) StdoutLine: {'line': b'running develop\n'}
+[1.803827] (zed_components) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/tools/src/sl_win_avg.cpp.o\x1b[0m\n'}
+[1.804349] (zed_components) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/tools/src/sl_tools.cpp.o\x1b[0m\n'}
+[1.804833] (-) TimerEvent: {}
+[1.809208] (zed_components) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_one_component.dir/src/tools/src/sl_tools.cpp.o\x1b[0m\n'}
+[1.810190] (zed_components) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/zed_camera/src/zed_camera_component.cpp.o\x1b[0m\n'}
+[1.811387] (zed_components) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_component.dir/src/tools/src/gnss_replay.cpp.o\x1b[0m\n'}
+[1.823422] (zed_components) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_one_component.dir/src/tools/src/sl_win_avg.cpp.o\x1b[0m\n'}
+[1.905035] (-) TimerEvent: {}
+[2.005655] (-) TimerEvent: {}
+[2.106285] (-) TimerEvent: {}
+[2.207145] (-) TimerEvent: {}
+[2.307763] (-) TimerEvent: {}
+[2.318326] (first_roomba_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[2.319438] (first_roomba_pkg) StdoutLine: {'line': b'writing first_roomba_pkg.egg-info/PKG-INFO\n'}
+[2.320581] (first_roomba_pkg) StdoutLine: {'line': b'writing dependency_links to first_roomba_pkg.egg-info/dependency_links.txt\n'}
+[2.321428] (first_roomba_pkg) StdoutLine: {'line': b'writing entry points to first_roomba_pkg.egg-info/entry_points.txt\n'}
+[2.322220] (first_roomba_pkg) StdoutLine: {'line': b'writing requirements to first_roomba_pkg.egg-info/requires.txt\n'}
+[2.322985] (first_roomba_pkg) StdoutLine: {'line': b'writing top-level names to first_roomba_pkg.egg-info/top_level.txt\n'}
+[2.327833] (first_roomba_pkg) StdoutLine: {'line': b"reading manifest file 'first_roomba_pkg.egg-info/SOURCES.txt'\n"}
+[2.329718] (first_roomba_pkg) StdoutLine: {'line': b"writing manifest file 'first_roomba_pkg.egg-info/SOURCES.txt'\n"}
+[2.407928] (-) TimerEvent: {}
+[2.454429] (first_roomba_pkg) StdoutLine: {'line': b'running build_ext\n'}
+[2.456101] (first_roomba_pkg) StdoutLine: {'line': b'Creating /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first-roomba-pkg.egg-link (link to .)\n'}
+[2.459949] (first_roomba_pkg) StdoutLine: {'line': b'\n'}
+[2.460373] (first_roomba_pkg) StdoutLine: {'line': b'Installed /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg\n'}
+[2.461778] (first_roomba_pkg) StdoutLine: {'line': b'running symlink_data\n'}
+[2.508144] (-) TimerEvent: {}
+[2.606922] (first_roomba_pkg) CommandEnded: {'returncode': 0}
+[2.608378] (-) TimerEvent: {}
+[2.640090] (first_roomba_pkg) JobEnded: {'identifier': 'first_roomba_pkg', 'rc': 0}
+[2.708653] (-) TimerEvent: {}
+[2.762483] (zed_components) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_one_component.dir/src/tools/src/gnss_replay.cpp.o\x1b[0m\n'}
+[2.808851] (-) TimerEvent: {}
+[2.897377] (zed_components) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/zed_camera_one_component.dir/src/zed_camera/src/zed_camera_one_component.cpp.o\x1b[0m\n'}
+[2.909067] (-) TimerEvent: {}
+[3.009797] (-) TimerEvent: {}
+[3.110583] (-) TimerEvent: {}
+[3.211309] (-) TimerEvent: {}
+[3.312019] (-) TimerEvent: {}
+[3.412783] (-) TimerEvent: {}
+[3.513572] (-) TimerEvent: {}
+[3.614328] (-) TimerEvent: {}
+[3.715188] (-) TimerEvent: {}
+[3.815939] (-) TimerEvent: {}
+[3.916668] (-) TimerEvent: {}
+[4.017424] (-) TimerEvent: {}
+[4.118225] (-) TimerEvent: {}
+[4.219013] (-) TimerEvent: {}
+[4.319743] (-) TimerEvent: {}
+[4.420487] (-) TimerEvent: {}
+[4.521294] (-) TimerEvent: {}
+[4.622087] (-) TimerEvent: {}
+[4.722876] (-) TimerEvent: {}
+[4.823628] (-) TimerEvent: {}
+[4.924431] (-) TimerEvent: {}
+[5.025199] (-) TimerEvent: {}
+[5.125982] (-) TimerEvent: {}
+[5.226795] (-) TimerEvent: {}
+[5.327546] (-) TimerEvent: {}
+[5.428279] (-) TimerEvent: {}
+[5.529034] (-) TimerEvent: {}
+[5.629808] (-) TimerEvent: {}
+[5.730565] (-) TimerEvent: {}
+[5.831322] (-) TimerEvent: {}
+[5.932077] (-) TimerEvent: {}
+[6.032854] (-) TimerEvent: {}
+[6.133614] (-) TimerEvent: {}
+[6.234334] (-) TimerEvent: {}
+[6.335088] (-) TimerEvent: {}
+[6.435847] (-) TimerEvent: {}
+[6.536591] (-) TimerEvent: {}
+[6.637348] (-) TimerEvent: {}
+[6.738121] (-) TimerEvent: {}
+[6.838874] (-) TimerEvent: {}
+[6.939555] (-) TimerEvent: {}
+[7.040301] (-) TimerEvent: {}
+[7.141077] (-) TimerEvent: {}
+[7.241840] (-) TimerEvent: {}
+[7.342645] (-) TimerEvent: {}
+[7.443398] (-) TimerEvent: {}
+[7.544136] (-) TimerEvent: {}
+[7.644866] (-) TimerEvent: {}
+[7.745631] (-) TimerEvent: {}
+[7.846403] (-) TimerEvent: {}
+[7.947170] (-) TimerEvent: {}
+[8.047951] (-) TimerEvent: {}
+[8.148726] (-) TimerEvent: {}
+[8.249514] (-) TimerEvent: {}
+[8.350275] (-) TimerEvent: {}
+[8.450990] (-) TimerEvent: {}
+[8.551702] (-) TimerEvent: {}
+[8.652488] (-) TimerEvent: {}
+[8.753225] (-) TimerEvent: {}
+[8.853926] (-) TimerEvent: {}
+[8.955484] (-) TimerEvent: {}
+[9.056186] (-) TimerEvent: {}
+[9.156881] (-) TimerEvent: {}
+[9.257569] (-) TimerEvent: {}
+[9.358267] (-) TimerEvent: {}
+[9.458963] (-) TimerEvent: {}
+[9.559619] (-) TimerEvent: {}
+[9.660314] (-) TimerEvent: {}
+[9.761016] (-) TimerEvent: {}
+[9.861657] (-) TimerEvent: {}
+[9.962361] (-) TimerEvent: {}
+[10.063127] (-) TimerEvent: {}
+[10.164094] (-) TimerEvent: {}
+[10.264790] (-) TimerEvent: {}
+[10.365454] (-) TimerEvent: {}
+[10.466145] (-) TimerEvent: {}
+[10.566865] (-) TimerEvent: {}
+[10.667564] (-) TimerEvent: {}
+[10.768283] (-) TimerEvent: {}
+[10.868982] (-) TimerEvent: {}
+[10.969698] (-) TimerEvent: {}
+[11.070421] (-) TimerEvent: {}
+[11.171276] (-) TimerEvent: {}
+[11.271995] (-) TimerEvent: {}
+[11.372693] (-) TimerEvent: {}
+[11.473404] (-) TimerEvent: {}
+[11.574119] (-) TimerEvent: {}
+[11.674871] (-) TimerEvent: {}
+[11.775599] (-) TimerEvent: {}
+[11.876311] (-) TimerEvent: {}
+[11.977041] (-) TimerEvent: {}
+[12.079350] (-) TimerEvent: {}
+[12.180088] (-) TimerEvent: {}
+[12.280791] (-) TimerEvent: {}
+[12.381498] (-) TimerEvent: {}
+[12.482201] (-) TimerEvent: {}
+[12.582941] (-) TimerEvent: {}
+[12.683669] (-) TimerEvent: {}
+[12.784370] (-) TimerEvent: {}
+[12.885082] (-) TimerEvent: {}
+[12.985815] (-) TimerEvent: {}
+[13.061874] (zed_components) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[13.062609] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[13.062781] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[13.062943] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[13.063072] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[13.063192] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[13.063305] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[13.063431] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[13.063541] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[13.063667] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[13.063774] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[13.063881] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.hpp:50\x1b[m\x1b[K,\n'}
+[13.063987] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.hpp:44\x1b[m\x1b[K,\n'}
+[13.064093] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:35\x1b[m\x1b[K,\n'}
+[13.064199] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/zed_camera/include/sl_types.hpp:18\x1b[m\x1b[K,\n'}
+[13.064307] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/zed_camera/include/zed_camera_component.hpp:24\x1b[m\x1b[K,\n'}
+[13.064414] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/zed_camera/src/zed_camera_component.cpp:15\x1b[m\x1b[K:\n'}
+[13.064521] (zed_components) StderrLine: {'line': b'\x1b[01m\x1b[K/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/zed_camera/src/zed_camera_component.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool stereolabs::ZedCamera::startCamera()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[13.064629] (zed_components) StderrLine: {'line': b'\x1b[01m\x1b[K/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[13.064747] (zed_components) StderrLine: {'line': b' 4249 |       get_logger(), \x1b[01;35m\x1b[K" * SVO resolution -> %dx%d"\x1b[m\x1b[K,\n'}
+[13.064854] (zed_components) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[13.064958] (zed_components) StderrLine: {'line': b' 4250 |       \x1b[32m\x1b[KmZed->getCameraInformation().camera_configuration.resolution.width\x1b[m\x1b[K,\n'}
+[13.065062] (zed_components) StderrLine: {'line': b'      |       \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[13.065167] (zed_components) StderrLine: {'line': b'      |                                                                    \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[13.065270] (zed_components) StderrLine: {'line': b'      |                                                                    \x1b[32m\x1b[Ksize_t {aka long unsigned int}\x1b[m\x1b[K\n'}
+[13.065376] (zed_components) StderrLine: {'line': b'\x1b[01m\x1b[K/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:44:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[13.065496] (zed_components) StderrLine: {'line': b' 4249 |       get_logger(), " * SVO resolution -> \x1b[01;36m\x1b[K%d\x1b[m\x1b[Kx%d",\n'}
+[13.065602] (zed_components) StderrLine: {'line': b'      |                                           \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[13.065708] (zed_components) StderrLine: {'line': b'      |                                            \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[13.065812] (zed_components) StderrLine: {'line': b'      |                                            \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[13.065917] (zed_components) StderrLine: {'line': b'      |                                           \x1b[32m\x1b[K%ld\x1b[m\x1b[K\n'}
+[13.066022] (zed_components) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[13.066127] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[13.066240] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[13.066349] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[13.066470] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[13.066575] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[13.066678] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[13.066782] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[13.067042] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[13.067157] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[13.067264] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[13.067366] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.hpp:50\x1b[m\x1b[K,\n'}
+[13.067469] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.hpp:44\x1b[m\x1b[K,\n'}
+[13.067587] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:35\x1b[m\x1b[K,\n'}
+[13.067693] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/zed_camera/include/sl_types.hpp:18\x1b[m\x1b[K,\n'}
+[13.067799] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/zed_camera/include/zed_camera_component.hpp:24\x1b[m\x1b[K,\n'}
+[13.067906] (zed_components) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/zed_camera/src/zed_camera_component.cpp:15\x1b[m\x1b[K:\n'}
+[13.068015] (zed_components) StderrLine: {'line': b'\x1b[01m\x1b[K/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 6 has type \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[13.068142] (zed_components) StderrLine: {'line': b' 4249 |       get_logger(), \x1b[01;35m\x1b[K" * SVO resolution -> %dx%d"\x1b[m\x1b[K,\n'}
+[13.068250] (zed_components) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[13.068355] (zed_components) StderrLine: {'line': b' 4250 |       mZed->getCameraInformation().camera_configuration.resolution.width,\n'}
+[13.068460] (zed_components) StderrLine: {'line': b' 4251 |       \x1b[32m\x1b[KmZed->getCameraInformation().camera_configuration.resolution.height\x1b[m\x1b[K);\n'}
+[13.068565] (zed_components) StderrLine: {'line': b'      |       \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[13.068668] (zed_components) StderrLine: {'line': b'      |                                                                    \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[13.068772] (zed_components) StderrLine: {'line': b'      |                                                                    \x1b[32m\x1b[Ksize_t {aka long unsigned int}\x1b[m\x1b[K\n'}
+[13.068877] (zed_components) StderrLine: {'line': b'\x1b[01m\x1b[K/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_components/src/zed_camera/src/zed_camera_component.cpp:4249:47:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[13.068985] (zed_components) StderrLine: {'line': b' 4249 |       get_logger(), " * SVO resolution -> %dx\x1b[01;36m\x1b[K%d\x1b[m\x1b[K",\n'}
+[13.069090] (zed_components) StderrLine: {'line': b'      |                                              \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[13.069193] (zed_components) StderrLine: {'line': b'      |                                               \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[13.069296] (zed_components) StderrLine: {'line': b'      |                                               \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[13.069398] (zed_components) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[K%ld\x1b[m\x1b[K\n'}
+[13.085941] (-) TimerEvent: {}
+[13.186586] (-) TimerEvent: {}
+[13.287302] (-) TimerEvent: {}
+[13.387979] (-) TimerEvent: {}
+[13.488664] (-) TimerEvent: {}
+[13.589351] (-) TimerEvent: {}
+[13.690033] (-) TimerEvent: {}
+[13.790715] (-) TimerEvent: {}
+[13.891409] (-) TimerEvent: {}
+[13.992096] (-) TimerEvent: {}
+[14.092776] (-) TimerEvent: {}
+[14.193461] (-) TimerEvent: {}
+[14.294152] (-) TimerEvent: {}
+[14.394856] (-) TimerEvent: {}
+[14.495539] (-) TimerEvent: {}
+[14.596221] (-) TimerEvent: {}
+[14.696893] (-) TimerEvent: {}
+[14.797568] (-) TimerEvent: {}
+[14.898245] (-) TimerEvent: {}
+[14.998931] (-) TimerEvent: {}
+[15.099594] (-) TimerEvent: {}
+[15.200270] (-) TimerEvent: {}
+[15.300951] (-) TimerEvent: {}
+[15.401626] (-) TimerEvent: {}
+[15.502275] (-) TimerEvent: {}
+[15.602959] (-) TimerEvent: {}
+[15.703635] (-) TimerEvent: {}
+[15.804303] (-) TimerEvent: {}
+[15.904982] (-) TimerEvent: {}
+[16.005646] (-) TimerEvent: {}
+[16.106314] (-) TimerEvent: {}
+[16.206967] (-) TimerEvent: {}
+[16.307646] (-) TimerEvent: {}
+[16.408289] (-) TimerEvent: {}
+[16.508948] (-) TimerEvent: {}
+[16.609622] (-) TimerEvent: {}
+[16.710304] (-) TimerEvent: {}
+[16.810978] (-) TimerEvent: {}
+[16.911647] (-) TimerEvent: {}
+[17.012326] (-) TimerEvent: {}
+[17.113042] (-) TimerEvent: {}
+[17.213697] (-) TimerEvent: {}
+[17.314350] (-) TimerEvent: {}
+[17.415037] (-) TimerEvent: {}
+[17.515708] (-) TimerEvent: {}
+[17.616371] (-) TimerEvent: {}
+[17.717056] (-) TimerEvent: {}
+[17.817734] (-) TimerEvent: {}
+[17.918409] (-) TimerEvent: {}
+[18.019124] (-) TimerEvent: {}
+[18.119798] (-) TimerEvent: {}
+[18.220476] (-) TimerEvent: {}
+[18.321171] (-) TimerEvent: {}
+[18.421859] (-) TimerEvent: {}
+[18.522522] (-) TimerEvent: {}
+[18.623237] (-) TimerEvent: {}
+[18.723912] (-) TimerEvent: {}
+[18.824593] (-) TimerEvent: {}
+[18.925262] (-) TimerEvent: {}
+[19.025939] (-) TimerEvent: {}
+[19.126612] (-) TimerEvent: {}
+[19.227300] (-) TimerEvent: {}
+[19.327973] (-) TimerEvent: {}
+[19.428671] (-) TimerEvent: {}
+[19.529367] (-) TimerEvent: {}
+[19.630035] (-) TimerEvent: {}
+[19.730738] (-) TimerEvent: {}
+[19.831452] (-) TimerEvent: {}
+[19.932123] (-) TimerEvent: {}
+[20.032821] (-) TimerEvent: {}
+[20.133507] (-) TimerEvent: {}
+[20.234190] (-) TimerEvent: {}
+[20.334908] (-) TimerEvent: {}
+[20.435619] (-) TimerEvent: {}
+[20.536292] (-) TimerEvent: {}
+[20.636971] (-) TimerEvent: {}
+[20.737657] (-) TimerEvent: {}
+[20.838344] (-) TimerEvent: {}
+[20.939035] (-) TimerEvent: {}
+[21.039710] (-) TimerEvent: {}
+[21.140391] (-) TimerEvent: {}
+[21.241088] (-) TimerEvent: {}
+[21.341793] (-) TimerEvent: {}
+[21.442503] (-) TimerEvent: {}
+[21.543227] (-) TimerEvent: {}
+[21.643909] (-) TimerEvent: {}
+[21.744577] (-) TimerEvent: {}
+[21.845246] (-) TimerEvent: {}
+[21.945904] (-) TimerEvent: {}
+[22.046600] (-) TimerEvent: {}
+[22.147348] (-) TimerEvent: {}
+[22.248027] (-) TimerEvent: {}
+[22.348707] (-) TimerEvent: {}
+[22.449385] (-) TimerEvent: {}
+[22.550074] (-) TimerEvent: {}
+[22.650754] (-) TimerEvent: {}
+[22.751464] (-) TimerEvent: {}
+[22.852144] (-) TimerEvent: {}
+[22.952844] (-) TimerEvent: {}
+[23.053535] (-) TimerEvent: {}
+[23.154227] (-) TimerEvent: {}
+[23.254933] (-) TimerEvent: {}
+[23.355619] (-) TimerEvent: {}
+[23.456320] (-) TimerEvent: {}
+[23.557000] (-) TimerEvent: {}
+[23.657681] (-) TimerEvent: {}
+[23.758356] (-) TimerEvent: {}
+[23.859057] (-) TimerEvent: {}
+[23.959739] (-) TimerEvent: {}
+[24.060407] (-) TimerEvent: {}
+[24.161070] (-) TimerEvent: {}
+[24.261736] (-) TimerEvent: {}
+[24.362420] (-) TimerEvent: {}
+[24.463110] (-) TimerEvent: {}
+[24.563800] (-) TimerEvent: {}
+[24.664468] (-) TimerEvent: {}
+[24.765155] (-) TimerEvent: {}
+[24.865854] (-) TimerEvent: {}
+[24.966531] (-) TimerEvent: {}
+[25.067236] (-) TimerEvent: {}
+[25.167902] (-) TimerEvent: {}
+[25.268570] (-) TimerEvent: {}
+[25.369260] (-) TimerEvent: {}
+[25.469930] (-) TimerEvent: {}
+[25.570614] (-) TimerEvent: {}
+[25.671302] (-) TimerEvent: {}
+[25.771987] (-) TimerEvent: {}
+[25.872666] (-) TimerEvent: {}
+[25.973330] (-) TimerEvent: {}
+[26.073980] (-) TimerEvent: {}
+[26.174668] (-) TimerEvent: {}
+[26.275370] (-) TimerEvent: {}
+[26.376017] (-) TimerEvent: {}
+[26.476684] (-) TimerEvent: {}
+[26.577377] (-) TimerEvent: {}
+[26.678053] (-) TimerEvent: {}
+[26.778733] (-) TimerEvent: {}
+[26.879449] (-) TimerEvent: {}
+[26.980153] (-) TimerEvent: {}
+[27.080838] (-) TimerEvent: {}
+[27.181565] (-) TimerEvent: {}
+[27.282228] (-) TimerEvent: {}
+[27.382900] (-) TimerEvent: {}
+[27.483582] (-) TimerEvent: {}
+[27.584258] (-) TimerEvent: {}
+[27.684953] (-) TimerEvent: {}
+[27.785650] (-) TimerEvent: {}
+[27.886351] (-) TimerEvent: {}
+[27.987080] (-) TimerEvent: {}
+[28.087774] (-) TimerEvent: {}
+[28.188431] (-) TimerEvent: {}
+[28.289115] (-) TimerEvent: {}
+[28.389797] (-) TimerEvent: {}
+[28.490487] (-) TimerEvent: {}
+[28.591220] (-) TimerEvent: {}
+[28.691928] (-) TimerEvent: {}
+[28.792644] (-) TimerEvent: {}
+[28.893327] (-) TimerEvent: {}
+[28.994021] (-) TimerEvent: {}
+[29.094709] (-) TimerEvent: {}
+[29.195391] (-) TimerEvent: {}
+[29.296046] (-) TimerEvent: {}
+[29.396713] (-) TimerEvent: {}
+[29.497401] (-) TimerEvent: {}
+[29.598112] (-) TimerEvent: {}
+[29.698763] (-) TimerEvent: {}
+[29.799457] (-) TimerEvent: {}
+[29.900152] (-) TimerEvent: {}
+[30.000847] (-) TimerEvent: {}
+[30.101540] (-) TimerEvent: {}
+[30.202207] (-) TimerEvent: {}
+[30.302880] (-) TimerEvent: {}
+[30.403553] (-) TimerEvent: {}
+[30.504243] (-) TimerEvent: {}
+[30.604933] (-) TimerEvent: {}
+[30.705619] (-) TimerEvent: {}
+[30.806306] (-) TimerEvent: {}
+[30.907044] (-) TimerEvent: {}
+[31.007743] (-) TimerEvent: {}
+[31.108421] (-) TimerEvent: {}
+[31.209127] (-) TimerEvent: {}
+[31.309871] (-) TimerEvent: {}
+[31.410583] (-) TimerEvent: {}
+[31.511306] (-) TimerEvent: {}
+[31.612003] (-) TimerEvent: {}
+[31.712695] (-) TimerEvent: {}
+[31.813377] (-) TimerEvent: {}
+[31.914075] (-) TimerEvent: {}
+[32.014727] (-) TimerEvent: {}
+[32.115423] (-) TimerEvent: {}
+[32.216088] (-) TimerEvent: {}
+[32.316722] (-) TimerEvent: {}
+[32.417403] (-) TimerEvent: {}
+[32.518090] (-) TimerEvent: {}
+[32.618765] (-) TimerEvent: {}
+[32.719483] (-) TimerEvent: {}
+[32.820149] (-) TimerEvent: {}
+[32.920861] (-) TimerEvent: {}
+[33.021551] (-) TimerEvent: {}
+[33.122236] (-) TimerEvent: {}
+[33.222949] (-) TimerEvent: {}
+[33.323630] (-) TimerEvent: {}
+[33.424300] (-) TimerEvent: {}
+[33.525002] (-) TimerEvent: {}
+[33.625713] (-) TimerEvent: {}
+[33.726422] (-) TimerEvent: {}
+[33.827201] (-) TimerEvent: {}
+[33.927919] (-) TimerEvent: {}
+[34.028615] (-) TimerEvent: {}
+[34.129332] (-) TimerEvent: {}
+[34.229999] (-) TimerEvent: {}
+[34.330685] (-) TimerEvent: {}
+[34.431351] (-) TimerEvent: {}
+[34.532015] (-) TimerEvent: {}
+[34.632706] (-) TimerEvent: {}
+[34.733370] (-) TimerEvent: {}
+[34.834052] (-) TimerEvent: {}
+[34.934737] (-) TimerEvent: {}
+[35.035466] (-) TimerEvent: {}
+[35.136173] (-) TimerEvent: {}
+[35.236895] (-) TimerEvent: {}
+[35.337587] (-) TimerEvent: {}
+[35.438262] (-) TimerEvent: {}
+[35.538972] (-) TimerEvent: {}
+[35.639643] (-) TimerEvent: {}
+[35.740314] (-) TimerEvent: {}
+[35.840998] (-) TimerEvent: {}
+[35.941693] (-) TimerEvent: {}
+[36.042394] (-) TimerEvent: {}
+[36.143127] (-) TimerEvent: {}
+[36.243799] (-) TimerEvent: {}
+[36.344464] (-) TimerEvent: {}
+[36.445135] (-) TimerEvent: {}
+[36.545825] (-) TimerEvent: {}
+[36.646492] (-) TimerEvent: {}
+[36.747207] (-) TimerEvent: {}
+[36.847897] (-) TimerEvent: {}
+[36.948552] (-) TimerEvent: {}
+[37.049240] (-) TimerEvent: {}
+[37.149923] (-) TimerEvent: {}
+[37.250616] (-) TimerEvent: {}
+[37.351309] (-) TimerEvent: {}
+[37.451983] (-) TimerEvent: {}
+[37.552670] (-) TimerEvent: {}
+[37.653301] (-) TimerEvent: {}
+[37.753943] (-) TimerEvent: {}
+[37.854600] (-) TimerEvent: {}
+[37.955283] (-) TimerEvent: {}
+[38.055951] (-) TimerEvent: {}
+[38.156603] (-) TimerEvent: {}
+[38.257238] (-) TimerEvent: {}
+[38.357911] (-) TimerEvent: {}
+[38.458543] (-) TimerEvent: {}
+[38.559251] (-) TimerEvent: {}
+[38.659931] (-) TimerEvent: {}
+[38.760558] (-) TimerEvent: {}
+[38.861237] (-) TimerEvent: {}
+[38.961883] (-) TimerEvent: {}
+[39.062554] (-) TimerEvent: {}
+[39.163227] (-) TimerEvent: {}
+[39.263886] (-) TimerEvent: {}
+[39.364543] (-) TimerEvent: {}
+[39.465204] (-) TimerEvent: {}
+[39.565864] (-) TimerEvent: {}
+[39.666543] (-) TimerEvent: {}
+[39.767217] (-) TimerEvent: {}
+[39.867900] (-) TimerEvent: {}
+[39.968580] (-) TimerEvent: {}
+[40.069277] (-) TimerEvent: {}
+[40.169965] (-) TimerEvent: {}
+[40.270673] (-) TimerEvent: {}
+[40.371409] (-) TimerEvent: {}
+[40.472082] (-) TimerEvent: {}
+[40.572765] (-) TimerEvent: {}
+[40.673408] (-) TimerEvent: {}
+[40.774111] (-) TimerEvent: {}
+[40.874841] (-) TimerEvent: {}
+[40.975507] (-) TimerEvent: {}
+[41.076188] (-) TimerEvent: {}
+[41.176881] (-) TimerEvent: {}
+[41.277585] (-) TimerEvent: {}
+[41.378254] (-) TimerEvent: {}
+[41.478948] (-) TimerEvent: {}
+[41.579619] (-) TimerEvent: {}
+[41.680303] (-) TimerEvent: {}
+[41.780975] (-) TimerEvent: {}
+[41.881675] (-) TimerEvent: {}
+[41.982384] (-) TimerEvent: {}
+[42.083096] (-) TimerEvent: {}
+[42.183814] (-) TimerEvent: {}
+[42.284650] (-) TimerEvent: {}
+[42.385343] (-) TimerEvent: {}
+[42.486008] (-) TimerEvent: {}
+[42.586709] (-) TimerEvent: {}
+[42.687437] (-) TimerEvent: {}
+[42.788128] (-) TimerEvent: {}
+[42.888835] (-) TimerEvent: {}
+[42.989527] (-) TimerEvent: {}
+[43.090262] (-) TimerEvent: {}
+[43.190971] (-) TimerEvent: {}
+[43.291650] (-) TimerEvent: {}
+[43.392319] (-) TimerEvent: {}
+[43.493037] (-) TimerEvent: {}
+[43.593768] (-) TimerEvent: {}
+[43.694474] (-) TimerEvent: {}
+[43.795222] (-) TimerEvent: {}
+[43.895919] (-) TimerEvent: {}
+[43.996629] (-) TimerEvent: {}
+[44.097328] (-) TimerEvent: {}
+[44.198035] (-) TimerEvent: {}
+[44.298699] (-) TimerEvent: {}
+[44.399404] (-) TimerEvent: {}
+[44.500089] (-) TimerEvent: {}
+[44.600811] (-) TimerEvent: {}
+[44.701488] (-) TimerEvent: {}
+[44.802138] (-) TimerEvent: {}
+[44.902829] (-) TimerEvent: {}
+[45.003497] (-) TimerEvent: {}
+[45.104165] (-) TimerEvent: {}
+[45.204839] (-) TimerEvent: {}
+[45.305495] (-) TimerEvent: {}
+[45.406155] (-) TimerEvent: {}
+[45.424760] (zed_components) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX shared library libzed_camera_one_component.so\x1b[0m\n'}
+[45.506347] (-) TimerEvent: {}
+[45.607082] (-) TimerEvent: {}
+[45.707771] (-) TimerEvent: {}
+[45.808465] (-) TimerEvent: {}
+[45.909143] (-) TimerEvent: {}
+[46.009853] (-) TimerEvent: {}
+[46.110558] (-) TimerEvent: {}
+[46.211249] (-) TimerEvent: {}
+[46.257720] (zed_components) StdoutLine: {'line': b'[ 90%] Built target zed_camera_one_component\n'}
+[46.311393] (-) TimerEvent: {}
+[46.412130] (-) TimerEvent: {}
+[46.512879] (-) TimerEvent: {}
+[46.613638] (-) TimerEvent: {}
+[46.714381] (-) TimerEvent: {}
+[46.815157] (-) TimerEvent: {}
+[46.915931] (-) TimerEvent: {}
+[47.016720] (-) TimerEvent: {}
+[47.117425] (-) TimerEvent: {}
+[47.218094] (-) TimerEvent: {}
+[47.318872] (-) TimerEvent: {}
+[47.419564] (-) TimerEvent: {}
+[47.520264] (-) TimerEvent: {}
+[47.620961] (-) TimerEvent: {}
+[47.721638] (-) TimerEvent: {}
+[47.822391] (-) TimerEvent: {}
+[47.923186] (-) TimerEvent: {}
+[48.023973] (-) TimerEvent: {}
+[48.124736] (-) TimerEvent: {}
+[48.225473] (-) TimerEvent: {}
+[48.326224] (-) TimerEvent: {}
+[48.426972] (-) TimerEvent: {}
+[48.527723] (-) TimerEvent: {}
+[48.628482] (-) TimerEvent: {}
+[48.729237] (-) TimerEvent: {}
+[48.829977] (-) TimerEvent: {}
+[48.930767] (-) TimerEvent: {}
+[49.031612] (-) TimerEvent: {}
+[49.132412] (-) TimerEvent: {}
+[49.233206] (-) TimerEvent: {}
+[49.333991] (-) TimerEvent: {}
+[49.434763] (-) TimerEvent: {}
+[49.535581] (-) TimerEvent: {}
+[49.636371] (-) TimerEvent: {}
+[49.737141] (-) TimerEvent: {}
+[49.837901] (-) TimerEvent: {}
+[49.938705] (-) TimerEvent: {}
+[50.039530] (-) TimerEvent: {}
+[50.140353] (-) TimerEvent: {}
+[50.241143] (-) TimerEvent: {}
+[50.341894] (-) TimerEvent: {}
+[50.442653] (-) TimerEvent: {}
+[50.543465] (-) TimerEvent: {}
+[50.644260] (-) TimerEvent: {}
+[50.745034] (-) TimerEvent: {}
+[50.845805] (-) TimerEvent: {}
+[50.946600] (-) TimerEvent: {}
+[51.047422] (-) TimerEvent: {}
+[51.148242] (-) TimerEvent: {}
+[51.249049] (-) TimerEvent: {}
+[51.349856] (-) TimerEvent: {}
+[51.450642] (-) TimerEvent: {}
+[51.551471] (-) TimerEvent: {}
+[51.652323] (-) TimerEvent: {}
+[51.753145] (-) TimerEvent: {}
+[51.853962] (-) TimerEvent: {}
+[51.954754] (-) TimerEvent: {}
+[52.055601] (-) TimerEvent: {}
+[52.156423] (-) TimerEvent: {}
+[52.257233] (-) TimerEvent: {}
+[52.358018] (-) TimerEvent: {}
+[52.458885] (-) TimerEvent: {}
+[52.559673] (-) TimerEvent: {}
+[52.660461] (-) TimerEvent: {}
+[52.761249] (-) TimerEvent: {}
+[52.862032] (-) TimerEvent: {}
+[52.962782] (-) TimerEvent: {}
+[53.063601] (-) TimerEvent: {}
+[53.164428] (-) TimerEvent: {}
+[53.265240] (-) TimerEvent: {}
+[53.366055] (-) TimerEvent: {}
+[53.466861] (-) TimerEvent: {}
+[53.567669] (-) TimerEvent: {}
+[53.668511] (-) TimerEvent: {}
+[53.769334] (-) TimerEvent: {}
+[53.870142] (-) TimerEvent: {}
+[53.970941] (-) TimerEvent: {}
+[54.071746] (-) TimerEvent: {}
+[54.172585] (-) TimerEvent: {}
+[54.273381] (-) TimerEvent: {}
+[54.374154] (-) TimerEvent: {}
+[54.474945] (-) TimerEvent: {}
+[54.575703] (-) TimerEvent: {}
+[54.676454] (-) TimerEvent: {}
+[54.777186] (-) TimerEvent: {}
+[54.877931] (-) TimerEvent: {}
+[54.978640] (-) TimerEvent: {}
+[55.079326] (-) TimerEvent: {}
+[55.180020] (-) TimerEvent: {}
+[55.280811] (-) TimerEvent: {}
+[55.381576] (-) TimerEvent: {}
+[55.482298] (-) TimerEvent: {}
+[55.583046] (-) TimerEvent: {}
+[55.683824] (-) TimerEvent: {}
+[55.784583] (-) TimerEvent: {}
+[55.885349] (-) TimerEvent: {}
+[55.986118] (-) TimerEvent: {}
+[56.086904] (-) TimerEvent: {}
+[56.187705] (-) TimerEvent: {}
+[56.288507] (-) TimerEvent: {}
+[56.389325] (-) TimerEvent: {}
+[56.490110] (-) TimerEvent: {}
+[56.590917] (-) TimerEvent: {}
+[56.691733] (-) TimerEvent: {}
+[56.792545] (-) TimerEvent: {}
+[56.893366] (-) TimerEvent: {}
+[56.994150] (-) TimerEvent: {}
+[57.094950] (-) TimerEvent: {}
+[57.195788] (-) TimerEvent: {}
+[57.296607] (-) TimerEvent: {}
+[57.397426] (-) TimerEvent: {}
+[57.502675] (-) TimerEvent: {}
+[57.603533] (-) TimerEvent: {}
+[57.704361] (-) TimerEvent: {}
+[57.805166] (-) TimerEvent: {}
+[57.905992] (-) TimerEvent: {}
+[58.006845] (-) TimerEvent: {}
+[58.107631] (-) TimerEvent: {}
+[58.208422] (-) TimerEvent: {}
+[58.309239] (-) TimerEvent: {}
+[58.410045] (-) TimerEvent: {}
+[58.510887] (-) TimerEvent: {}
+[58.611713] (-) TimerEvent: {}
+[58.712547] (-) TimerEvent: {}
+[58.813373] (-) TimerEvent: {}
+[58.914215] (-) TimerEvent: {}
+[59.015022] (-) TimerEvent: {}
+[59.115815] (-) TimerEvent: {}
+[59.216605] (-) TimerEvent: {}
+[59.317425] (-) TimerEvent: {}
+[59.418262] (-) TimerEvent: {}
+[59.519101] (-) TimerEvent: {}
+[59.619904] (-) TimerEvent: {}
+[59.720737] (-) TimerEvent: {}
+[59.821542] (-) TimerEvent: {}
+[59.922355] (-) TimerEvent: {}
+[60.023189] (-) TimerEvent: {}
+[60.123984] (-) TimerEvent: {}
+[60.224692] (-) TimerEvent: {}
+[60.325505] (-) TimerEvent: {}
+[60.426326] (-) TimerEvent: {}
+[60.527167] (-) TimerEvent: {}
+[60.628017] (-) TimerEvent: {}
+[60.728841] (-) TimerEvent: {}
+[60.829656] (-) TimerEvent: {}
+[60.930495] (-) TimerEvent: {}
+[61.031345] (-) TimerEvent: {}
+[61.132133] (-) TimerEvent: {}
+[61.232862] (-) TimerEvent: {}
+[61.333631] (-) TimerEvent: {}
+[61.434400] (-) TimerEvent: {}
+[61.535261] (-) TimerEvent: {}
+[61.636052] (-) TimerEvent: {}
+[61.736804] (-) TimerEvent: {}
+[61.837577] (-) TimerEvent: {}
+[61.938388] (-) TimerEvent: {}
+[62.039183] (-) TimerEvent: {}
+[62.139951] (-) TimerEvent: {}
+[62.240706] (-) TimerEvent: {}
+[62.341470] (-) TimerEvent: {}
+[62.442261] (-) TimerEvent: {}
+[62.543072] (-) TimerEvent: {}
+[62.643856] (-) TimerEvent: {}
+[62.744655] (-) TimerEvent: {}
+[62.845419] (-) TimerEvent: {}
+[62.946210] (-) TimerEvent: {}
+[63.046994] (-) TimerEvent: {}
+[63.147780] (-) TimerEvent: {}
+[63.248531] (-) TimerEvent: {}
+[63.349284] (-) TimerEvent: {}
+[63.450071] (-) TimerEvent: {}
+[63.550867] (-) TimerEvent: {}
+[63.651635] (-) TimerEvent: {}
+[63.752432] (-) TimerEvent: {}
+[63.853195] (-) TimerEvent: {}
+[63.953966] (-) TimerEvent: {}
+[64.054746] (-) TimerEvent: {}
+[64.155562] (-) TimerEvent: {}
+[64.256336] (-) TimerEvent: {}
+[64.357112] (-) TimerEvent: {}
+[64.457886] (-) TimerEvent: {}
+[64.558687] (-) TimerEvent: {}
+[64.659510] (-) TimerEvent: {}
+[64.760290] (-) TimerEvent: {}
+[64.861071] (-) TimerEvent: {}
+[64.961823] (-) TimerEvent: {}
+[65.062580] (-) TimerEvent: {}
+[65.163326] (-) TimerEvent: {}
+[65.264124] (-) TimerEvent: {}
+[65.364904] (-) TimerEvent: {}
+[65.465630] (-) TimerEvent: {}
+[65.566365] (-) TimerEvent: {}
+[65.667161] (-) TimerEvent: {}
+[65.767919] (-) TimerEvent: {}
+[65.868688] (-) TimerEvent: {}
+[65.969474] (-) TimerEvent: {}
+[66.070285] (-) TimerEvent: {}
+[66.171195] (-) TimerEvent: {}
+[66.272014] (-) TimerEvent: {}
+[66.372796] (-) TimerEvent: {}
+[66.473550] (-) TimerEvent: {}
+[66.574303] (-) TimerEvent: {}
+[66.675100] (-) TimerEvent: {}
+[66.775927] (-) TimerEvent: {}
+[66.876750] (-) TimerEvent: {}
+[66.977549] (-) TimerEvent: {}
+[67.078347] (-) TimerEvent: {}
+[67.179198] (-) TimerEvent: {}
+[67.280031] (-) TimerEvent: {}
+[67.380830] (-) TimerEvent: {}
+[67.481607] (-) TimerEvent: {}
+[67.582392] (-) TimerEvent: {}
+[67.683220] (-) TimerEvent: {}
+[67.784016] (-) TimerEvent: {}
+[67.884825] (-) TimerEvent: {}
+[67.985622] (-) TimerEvent: {}
+[68.086408] (-) TimerEvent: {}
+[68.187214] (-) TimerEvent: {}
+[68.288010] (-) TimerEvent: {}
+[68.388797] (-) TimerEvent: {}
+[68.489578] (-) TimerEvent: {}
+[68.590619] (-) TimerEvent: {}
+[68.691474] (-) TimerEvent: {}
+[68.792300] (-) TimerEvent: {}
+[68.893112] (-) TimerEvent: {}
+[68.993918] (-) TimerEvent: {}
+[69.094719] (-) TimerEvent: {}
+[69.195536] (-) TimerEvent: {}
+[69.296356] (-) TimerEvent: {}
+[69.397143] (-) TimerEvent: {}
+[69.497935] (-) TimerEvent: {}
+[69.598741] (-) TimerEvent: {}
+[69.699559] (-) TimerEvent: {}
+[69.800341] (-) TimerEvent: {}
+[69.901140] (-) TimerEvent: {}
+[70.001959] (-) TimerEvent: {}
+[70.102767] (-) TimerEvent: {}
+[70.203523] (-) TimerEvent: {}
+[70.304352] (-) TimerEvent: {}
+[70.405145] (-) TimerEvent: {}
+[70.505977] (-) TimerEvent: {}
+[70.606774] (-) TimerEvent: {}
+[70.707571] (-) TimerEvent: {}
+[70.808348] (-) TimerEvent: {}
+[70.909165] (-) TimerEvent: {}
+[71.009981] (-) TimerEvent: {}
+[71.110776] (-) TimerEvent: {}
+[71.211617] (-) TimerEvent: {}
+[71.312417] (-) TimerEvent: {}
+[71.413199] (-) TimerEvent: {}
+[71.513983] (-) TimerEvent: {}
+[71.614768] (-) TimerEvent: {}
+[71.715551] (-) TimerEvent: {}
+[71.816310] (-) TimerEvent: {}
+[71.917077] (-) TimerEvent: {}
+[72.017844] (-) TimerEvent: {}
+[72.118618] (-) TimerEvent: {}
+[72.219421] (-) TimerEvent: {}
+[72.320195] (-) TimerEvent: {}
+[72.420947] (-) TimerEvent: {}
+[72.521724] (-) TimerEvent: {}
+[72.622507] (-) TimerEvent: {}
+[72.723334] (-) TimerEvent: {}
+[72.824118] (-) TimerEvent: {}
+[72.924919] (-) TimerEvent: {}
+[73.025705] (-) TimerEvent: {}
+[73.126467] (-) TimerEvent: {}
+[73.227263] (-) TimerEvent: {}
+[73.327997] (-) TimerEvent: {}
+[73.428744] (-) TimerEvent: {}
+[73.529544] (-) TimerEvent: {}
+[73.630352] (-) TimerEvent: {}
+[73.731177] (-) TimerEvent: {}
+[73.831957] (-) TimerEvent: {}
+[73.932731] (-) TimerEvent: {}
+[74.033548] (-) TimerEvent: {}
+[74.134339] (-) TimerEvent: {}
+[74.235164] (-) TimerEvent: {}
+[74.335944] (-) TimerEvent: {}
+[74.436728] (-) TimerEvent: {}
+[74.537540] (-) TimerEvent: {}
+[74.638338] (-) TimerEvent: {}
+[74.739172] (-) TimerEvent: {}
+[74.839965] (-) TimerEvent: {}
+[74.940776] (-) TimerEvent: {}
+[75.041612] (-) TimerEvent: {}
+[75.142456] (-) TimerEvent: {}
+[75.243336] (-) TimerEvent: {}
+[75.344179] (-) TimerEvent: {}
+[75.444974] (-) TimerEvent: {}
+[75.545798] (-) TimerEvent: {}
+[75.646612] (-) TimerEvent: {}
+[75.747479] (-) TimerEvent: {}
+[75.848265] (-) TimerEvent: {}
+[75.949052] (-) TimerEvent: {}
+[76.049855] (-) TimerEvent: {}
+[76.150682] (-) TimerEvent: {}
+[76.251582] (-) TimerEvent: {}
+[76.352388] (-) TimerEvent: {}
+[76.453154] (-) TimerEvent: {}
+[76.553908] (-) TimerEvent: {}
+[76.654712] (-) TimerEvent: {}
+[76.755572] (-) TimerEvent: {}
+[76.856387] (-) TimerEvent: {}
+[76.957190] (-) TimerEvent: {}
+[77.057990] (-) TimerEvent: {}
+[77.158832] (-) TimerEvent: {}
+[77.259638] (-) TimerEvent: {}
+[77.360441] (-) TimerEvent: {}
+[77.461245] (-) TimerEvent: {}
+[77.562067] (-) TimerEvent: {}
+[77.662920] (-) TimerEvent: {}
+[77.763739] (-) TimerEvent: {}
+[77.864531] (-) TimerEvent: {}
+[77.965326] (-) TimerEvent: {}
+[78.066109] (-) TimerEvent: {}
+[78.166921] (-) TimerEvent: {}
+[78.267703] (-) TimerEvent: {}
+[78.368467] (-) TimerEvent: {}
+[78.469250] (-) TimerEvent: {}
+[78.570022] (-) TimerEvent: {}
+[78.670829] (-) TimerEvent: {}
+[78.771649] (-) TimerEvent: {}
+[78.872460] (-) TimerEvent: {}
+[78.973263] (-) TimerEvent: {}
+[79.074042] (-) TimerEvent: {}
+[79.174849] (-) TimerEvent: {}
+[79.275631] (-) TimerEvent: {}
+[79.376393] (-) TimerEvent: {}
+[79.477161] (-) TimerEvent: {}
+[79.577942] (-) TimerEvent: {}
+[79.678747] (-) TimerEvent: {}
+[79.779594] (-) TimerEvent: {}
+[79.880404] (-) TimerEvent: {}
+[79.981228] (-) TimerEvent: {}
+[80.082029] (-) TimerEvent: {}
+[80.182740] (-) TimerEvent: {}
+[80.283554] (-) TimerEvent: {}
+[80.384312] (-) TimerEvent: {}
+[80.485074] (-) TimerEvent: {}
+[80.585855] (-) TimerEvent: {}
+[80.686639] (-) TimerEvent: {}
+[80.787478] (-) TimerEvent: {}
+[80.888251] (-) TimerEvent: {}
+[80.989012] (-) TimerEvent: {}
+[81.089784] (-) TimerEvent: {}
+[81.190591] (-) TimerEvent: {}
+[81.291427] (-) TimerEvent: {}
+[81.392216] (-) TimerEvent: {}
+[81.492979] (-) TimerEvent: {}
+[81.593755] (-) TimerEvent: {}
+[81.694552] (-) TimerEvent: {}
+[81.795385] (-) TimerEvent: {}
+[81.896194] (-) TimerEvent: {}
+[81.996997] (-) TimerEvent: {}
+[82.097813] (-) TimerEvent: {}
+[82.198608] (-) TimerEvent: {}
+[82.299452] (-) TimerEvent: {}
+[82.400273] (-) TimerEvent: {}
+[82.501046] (-) TimerEvent: {}
+[82.601843] (-) TimerEvent: {}
+[82.702672] (-) TimerEvent: {}
+[82.803531] (-) TimerEvent: {}
+[82.904377] (-) TimerEvent: {}
+[83.005184] (-) TimerEvent: {}
+[83.105984] (-) TimerEvent: {}
+[83.206822] (-) TimerEvent: {}
+[83.307614] (-) TimerEvent: {}
+[83.408393] (-) TimerEvent: {}
+[83.509197] (-) TimerEvent: {}
+[83.610003] (-) TimerEvent: {}
+[83.710795] (-) TimerEvent: {}
+[83.811687] (-) TimerEvent: {}
+[83.912551] (-) TimerEvent: {}
+[84.013390] (-) TimerEvent: {}
+[84.114222] (-) TimerEvent: {}
+[84.215021] (-) TimerEvent: {}
+[84.315771] (-) TimerEvent: {}
+[84.416473] (-) TimerEvent: {}
+[84.517270] (-) TimerEvent: {}
+[84.618088] (-) TimerEvent: {}
+[84.718954] (-) TimerEvent: {}
+[84.819782] (-) TimerEvent: {}
+[84.920607] (-) TimerEvent: {}
+[85.021404] (-) TimerEvent: {}
+[85.122187] (-) TimerEvent: {}
+[85.222957] (-) TimerEvent: {}
+[85.323745] (-) TimerEvent: {}
+[85.424529] (-) TimerEvent: {}
+[85.525309] (-) TimerEvent: {}
+[85.626072] (-) TimerEvent: {}
+[85.726797] (-) TimerEvent: {}
+[85.827649] (-) TimerEvent: {}
+[85.928477] (-) TimerEvent: {}
+[86.029257] (-) TimerEvent: {}
+[86.130034] (-) TimerEvent: {}
+[86.230785] (-) TimerEvent: {}
+[86.331616] (-) TimerEvent: {}
+[86.432345] (-) TimerEvent: {}
+[86.533078] (-) TimerEvent: {}
+[86.633880] (-) TimerEvent: {}
+[86.734660] (-) TimerEvent: {}
+[86.835485] (-) TimerEvent: {}
+[86.936295] (-) TimerEvent: {}
+[87.037072] (-) TimerEvent: {}
+[87.137864] (-) TimerEvent: {}
+[87.238668] (-) TimerEvent: {}
+[87.339495] (-) TimerEvent: {}
+[87.440236] (-) TimerEvent: {}
+[87.540963] (-) TimerEvent: {}
+[87.641774] (-) TimerEvent: {}
+[87.742579] (-) TimerEvent: {}
+[87.843425] (-) TimerEvent: {}
+[87.944239] (-) TimerEvent: {}
+[88.045025] (-) TimerEvent: {}
+[88.145819] (-) TimerEvent: {}
+[88.246631] (-) TimerEvent: {}
+[88.347465] (-) TimerEvent: {}
+[88.448257] (-) TimerEvent: {}
+[88.548964] (-) TimerEvent: {}
+[88.649584] (-) TimerEvent: {}
+[88.750180] (-) TimerEvent: {}
+[88.850725] (-) TimerEvent: {}
+[88.951329] (-) TimerEvent: {}
+[89.052197] (-) TimerEvent: {}
+[89.152806] (-) TimerEvent: {}
+[89.253522] (-) TimerEvent: {}
+[89.354243] (-) TimerEvent: {}
+[89.454972] (-) TimerEvent: {}
+[89.555690] (-) TimerEvent: {}
+[89.656355] (-) TimerEvent: {}
+[89.757066] (-) TimerEvent: {}
+[89.857868] (-) TimerEvent: {}
+[89.958688] (-) TimerEvent: {}
+[90.059514] (-) TimerEvent: {}
+[90.160260] (-) TimerEvent: {}
+[90.261081] (-) TimerEvent: {}
+[90.361910] (-) TimerEvent: {}
+[90.462730] (-) TimerEvent: {}
+[90.563530] (-) TimerEvent: {}
+[90.664280] (-) TimerEvent: {}
+[90.765047] (-) TimerEvent: {}
+[90.865795] (-) TimerEvent: {}
+[90.966557] (-) TimerEvent: {}
+[91.067355] (-) TimerEvent: {}
+[91.168136] (-) TimerEvent: {}
+[91.268940] (-) TimerEvent: {}
+[91.369757] (-) TimerEvent: {}
+[91.470566] (-) TimerEvent: {}
+[91.571367] (-) TimerEvent: {}
+[91.672084] (-) TimerEvent: {}
+[91.772816] (-) TimerEvent: {}
+[91.873596] (-) TimerEvent: {}
+[91.974351] (-) TimerEvent: {}
+[92.075138] (-) TimerEvent: {}
+[92.175893] (-) TimerEvent: {}
+[92.276648] (-) TimerEvent: {}
+[92.377424] (-) TimerEvent: {}
+[92.478157] (-) TimerEvent: {}
+[92.578915] (-) TimerEvent: {}
+[92.679677] (-) TimerEvent: {}
+[92.780445] (-) TimerEvent: {}
+[92.881235] (-) TimerEvent: {}
+[92.981980] (-) TimerEvent: {}
+[93.082766] (-) TimerEvent: {}
+[93.183554] (-) TimerEvent: {}
+[93.284310] (-) TimerEvent: {}
+[93.385088] (-) TimerEvent: {}
+[93.485894] (-) TimerEvent: {}
+[93.586688] (-) TimerEvent: {}
+[93.687454] (-) TimerEvent: {}
+[93.788210] (-) TimerEvent: {}
+[93.888972] (-) TimerEvent: {}
+[93.990018] (-) TimerEvent: {}
+[94.090858] (-) TimerEvent: {}
+[94.191680] (-) TimerEvent: {}
+[94.292503] (-) TimerEvent: {}
+[94.393311] (-) TimerEvent: {}
+[94.494120] (-) TimerEvent: {}
+[94.594987] (-) TimerEvent: {}
+[94.695795] (-) TimerEvent: {}
+[94.796595] (-) TimerEvent: {}
+[94.897402] (-) TimerEvent: {}
+[94.998210] (-) TimerEvent: {}
+[95.098986] (-) TimerEvent: {}
+[95.199723] (-) TimerEvent: {}
+[95.300471] (-) TimerEvent: {}
+[95.401123] (-) TimerEvent: {}
+[95.501860] (-) TimerEvent: {}
+[95.602564] (-) TimerEvent: {}
+[95.703222] (-) TimerEvent: {}
+[95.803966] (-) TimerEvent: {}
+[95.904696] (-) TimerEvent: {}
+[96.005467] (-) TimerEvent: {}
+[96.106234] (-) TimerEvent: {}
+[96.207032] (-) TimerEvent: {}
+[96.307818] (-) TimerEvent: {}
+[96.408580] (-) TimerEvent: {}
+[96.509328] (-) TimerEvent: {}
+[96.610093] (-) TimerEvent: {}
+[96.710874] (-) TimerEvent: {}
+[96.811643] (-) TimerEvent: {}
+[96.912388] (-) TimerEvent: {}
+[97.013141] (-) TimerEvent: {}
+[97.113971] (-) TimerEvent: {}
+[97.214768] (-) TimerEvent: {}
+[97.315604] (-) TimerEvent: {}
+[97.416344] (-) TimerEvent: {}
+[97.517075] (-) TimerEvent: {}
+[97.617828] (-) TimerEvent: {}
+[97.718578] (-) TimerEvent: {}
+[97.819381] (-) TimerEvent: {}
+[97.920233] (-) TimerEvent: {}
+[98.021026] (-) TimerEvent: {}
+[98.121825] (-) TimerEvent: {}
+[98.222627] (-) TimerEvent: {}
+[98.323428] (-) TimerEvent: {}
+[98.424178] (-) TimerEvent: {}
+[98.524886] (-) TimerEvent: {}
+[98.625631] (-) TimerEvent: {}
+[98.726387] (-) TimerEvent: {}
+[98.827169] (-) TimerEvent: {}
+[98.927908] (-) TimerEvent: {}
+[99.028644] (-) TimerEvent: {}
+[99.129388] (-) TimerEvent: {}
+[99.230155] (-) TimerEvent: {}
+[99.330943] (-) TimerEvent: {}
+[99.431680] (-) TimerEvent: {}
+[99.532377] (-) TimerEvent: {}
+[99.633082] (-) TimerEvent: {}
+[99.733844] (-) TimerEvent: {}
+[99.834591] (-) TimerEvent: {}
+[99.935379] (-) TimerEvent: {}
+[100.036133] (-) TimerEvent: {}
+[100.136877] (-) TimerEvent: {}
+[100.237593] (-) TimerEvent: {}
+[100.338394] (-) TimerEvent: {}
+[100.439176] (-) TimerEvent: {}
+[100.539911] (-) TimerEvent: {}
+[100.640610] (-) TimerEvent: {}
+[100.741387] (-) TimerEvent: {}
+[100.842143] (-) TimerEvent: {}
+[100.942913] (-) TimerEvent: {}
+[101.043677] (-) TimerEvent: {}
+[101.144452] (-) TimerEvent: {}
+[101.245151] (-) TimerEvent: {}
+[101.345957] (-) TimerEvent: {}
+[101.446692] (-) TimerEvent: {}
+[101.547445] (-) TimerEvent: {}
+[101.648159] (-) TimerEvent: {}
+[101.748899] (-) TimerEvent: {}
+[101.849637] (-) TimerEvent: {}
+[101.950374] (-) TimerEvent: {}
+[102.051145] (-) TimerEvent: {}
+[102.151868] (-) TimerEvent: {}
+[102.252613] (-) TimerEvent: {}
+[102.353392] (-) TimerEvent: {}
+[102.454128] (-) TimerEvent: {}
+[102.554905] (-) TimerEvent: {}
+[102.655913] (-) TimerEvent: {}
+[102.756720] (-) TimerEvent: {}
+[102.857507] (-) TimerEvent: {}
+[102.958296] (-) TimerEvent: {}
+[103.059189] (-) TimerEvent: {}
+[103.159930] (-) TimerEvent: {}
+[103.260711] (-) TimerEvent: {}
+[103.361521] (-) TimerEvent: {}
+[103.462315] (-) TimerEvent: {}
+[103.563150] (-) TimerEvent: {}
+[103.663893] (-) TimerEvent: {}
+[103.764664] (-) TimerEvent: {}
+[103.865510] (-) TimerEvent: {}
+[103.966311] (-) TimerEvent: {}
+[104.067117] (-) TimerEvent: {}
+[104.167983] (-) TimerEvent: {}
+[104.268780] (-) TimerEvent: {}
+[104.369582] (-) TimerEvent: {}
+[104.470347] (-) TimerEvent: {}
+[104.571123] (-) TimerEvent: {}
+[104.671890] (-) TimerEvent: {}
+[104.772577] (-) TimerEvent: {}
+[104.873217] (-) TimerEvent: {}
+[104.973997] (-) TimerEvent: {}
+[105.074666] (-) TimerEvent: {}
+[105.175615] (-) TimerEvent: {}
+[105.276401] (-) TimerEvent: {}
+[105.377210] (-) TimerEvent: {}
+[105.477988] (-) TimerEvent: {}
+[105.578771] (-) TimerEvent: {}
+[105.679560] (-) TimerEvent: {}
+[105.780298] (-) TimerEvent: {}
+[105.881058] (-) TimerEvent: {}
+[105.981853] (-) TimerEvent: {}
+[106.082636] (-) TimerEvent: {}
+[106.183454] (-) TimerEvent: {}
+[106.284280] (-) TimerEvent: {}
+[106.385086] (-) TimerEvent: {}
+[106.485864] (-) TimerEvent: {}
+[106.586646] (-) TimerEvent: {}
+[106.687593] (-) TimerEvent: {}
+[106.788347] (-) TimerEvent: {}
+[106.889080] (-) TimerEvent: {}
+[106.989918] (-) TimerEvent: {}
+[107.090667] (-) TimerEvent: {}
+[107.191466] (-) TimerEvent: {}
+[107.292221] (-) TimerEvent: {}
+[107.393009] (-) TimerEvent: {}
+[107.493782] (-) TimerEvent: {}
+[107.594567] (-) TimerEvent: {}
+[107.695387] (-) TimerEvent: {}
+[107.796182] (-) TimerEvent: {}
+[107.896955] (-) TimerEvent: {}
+[107.997747] (-) TimerEvent: {}
+[108.098516] (-) TimerEvent: {}
+[108.199288] (-) TimerEvent: {}
+[108.300068] (-) TimerEvent: {}
+[108.400875] (-) TimerEvent: {}
+[108.501678] (-) TimerEvent: {}
+[108.602469] (-) TimerEvent: {}
+[108.703282] (-) TimerEvent: {}
+[108.804095] (-) TimerEvent: {}
+[108.904896] (-) TimerEvent: {}
+[109.005671] (-) TimerEvent: {}
+[109.106461] (-) TimerEvent: {}
+[109.207309] (-) TimerEvent: {}
+[109.308082] (-) TimerEvent: {}
+[109.408854] (-) TimerEvent: {}
+[109.509632] (-) TimerEvent: {}
+[109.610399] (-) TimerEvent: {}
+[109.711203] (-) TimerEvent: {}
+[109.811949] (-) TimerEvent: {}
+[109.912701] (-) TimerEvent: {}
+[110.013413] (-) TimerEvent: {}
+[110.114156] (-) TimerEvent: {}
+[110.214853] (-) TimerEvent: {}
+[110.315635] (-) TimerEvent: {}
+[110.416417] (-) TimerEvent: {}
+[110.517198] (-) TimerEvent: {}
+[110.617987] (-) TimerEvent: {}
+[110.718765] (-) TimerEvent: {}
+[110.819562] (-) TimerEvent: {}
+[110.920314] (-) TimerEvent: {}
+[111.021062] (-) TimerEvent: {}
+[111.121826] (-) TimerEvent: {}
+[111.222538] (-) TimerEvent: {}
+[111.323321] (-) TimerEvent: {}
+[111.424069] (-) TimerEvent: {}
+[111.524847] (-) TimerEvent: {}
+[111.625595] (-) TimerEvent: {}
+[111.726311] (-) TimerEvent: {}
+[111.827076] (-) TimerEvent: {}
+[111.927811] (-) TimerEvent: {}
+[112.028570] (-) TimerEvent: {}
+[112.129243] (-) TimerEvent: {}
+[112.229886] (-) TimerEvent: {}
+[112.330642] (-) TimerEvent: {}
+[112.431417] (-) TimerEvent: {}
+[112.532201] (-) TimerEvent: {}
+[112.632924] (-) TimerEvent: {}
+[112.733612] (-) TimerEvent: {}
+[112.834339] (-) TimerEvent: {}
+[112.935116] (-) TimerEvent: {}
+[113.035825] (-) TimerEvent: {}
+[113.136403] (-) TimerEvent: {}
+[113.237006] (-) TimerEvent: {}
+[113.337721] (-) TimerEvent: {}
+[113.438467] (-) TimerEvent: {}
+[113.539267] (-) TimerEvent: {}
+[113.639974] (-) TimerEvent: {}
+[113.740672] (-) TimerEvent: {}
+[113.841373] (-) TimerEvent: {}
+[113.942079] (-) TimerEvent: {}
+[114.042831] (-) TimerEvent: {}
+[114.143549] (-) TimerEvent: {}
+[114.244254] (-) TimerEvent: {}
+[114.344978] (-) TimerEvent: {}
+[114.445680] (-) TimerEvent: {}
+[114.546406] (-) TimerEvent: {}
+[114.647176] (-) TimerEvent: {}
+[114.747881] (-) TimerEvent: {}
+[114.848587] (-) TimerEvent: {}
+[114.949357] (-) TimerEvent: {}
+[115.050119] (-) TimerEvent: {}
+[115.150935] (-) TimerEvent: {}
+[115.251698] (-) TimerEvent: {}
+[115.352438] (-) TimerEvent: {}
+[115.453155] (-) TimerEvent: {}
+[115.553881] (-) TimerEvent: {}
+[115.654616] (-) TimerEvent: {}
+[115.755389] (-) TimerEvent: {}
+[115.856118] (-) TimerEvent: {}
+[115.956868] (-) TimerEvent: {}
+[116.057589] (-) TimerEvent: {}
+[116.158351] (-) TimerEvent: {}
+[116.259149] (-) TimerEvent: {}
+[116.359882] (-) TimerEvent: {}
+[116.460597] (-) TimerEvent: {}
+[116.561341] (-) TimerEvent: {}
+[116.662078] (-) TimerEvent: {}
+[116.762840] (-) TimerEvent: {}
+[116.863542] (-) TimerEvent: {}
+[116.964244] (-) TimerEvent: {}
+[117.064970] (-) TimerEvent: {}
+[117.165717] (-) TimerEvent: {}
+[117.266461] (-) TimerEvent: {}
+[117.367197] (-) TimerEvent: {}
+[117.467805] (-) TimerEvent: {}
+[117.568428] (-) TimerEvent: {}
+[117.669188] (-) TimerEvent: {}
+[117.769937] (-) TimerEvent: {}
+[117.870662] (-) TimerEvent: {}
+[117.987541] (-) TimerEvent: {}
+[118.088296] (-) TimerEvent: {}
+[118.189037] (-) TimerEvent: {}
+[118.289787] (-) TimerEvent: {}
+[118.390534] (-) TimerEvent: {}
+[118.491301] (-) TimerEvent: {}
+[118.592071] (-) TimerEvent: {}
+[118.692845] (-) TimerEvent: {}
+[118.793600] (-) TimerEvent: {}
+[118.894343] (-) TimerEvent: {}
+[118.995096] (-) TimerEvent: {}
+[119.095830] (-) TimerEvent: {}
+[119.196558] (-) TimerEvent: {}
+[119.297288] (-) TimerEvent: {}
+[119.398028] (-) TimerEvent: {}
+[119.498774] (-) TimerEvent: {}
+[119.599561] (-) TimerEvent: {}
+[119.700355] (-) TimerEvent: {}
+[119.801138] (-) TimerEvent: {}
+[119.901914] (-) TimerEvent: {}
+[120.002671] (-) TimerEvent: {}
+[120.103455] (-) TimerEvent: {}
+[120.204336] (-) TimerEvent: {}
+[120.305158] (-) TimerEvent: {}
+[120.405949] (-) TimerEvent: {}
+[120.506711] (-) TimerEvent: {}
+[120.607495] (-) TimerEvent: {}
+[120.708283] (-) TimerEvent: {}
+[120.809086] (-) TimerEvent: {}
+[120.909857] (-) TimerEvent: {}
+[121.010597] (-) TimerEvent: {}
+[121.111406] (-) TimerEvent: {}
+[121.212184] (-) TimerEvent: {}
+[121.312971] (-) TimerEvent: {}
+[121.413763] (-) TimerEvent: {}
+[121.514519] (-) TimerEvent: {}
+[121.615289] (-) TimerEvent: {}
+[121.716067] (-) TimerEvent: {}
+[121.816880] (-) TimerEvent: {}
+[121.917662] (-) TimerEvent: {}
+[122.018455] (-) TimerEvent: {}
+[122.119269] (-) TimerEvent: {}
+[122.220061] (-) TimerEvent: {}
+[122.320842] (-) TimerEvent: {}
+[122.421585] (-) TimerEvent: {}
+[122.522347] (-) TimerEvent: {}
+[122.623117] (-) TimerEvent: {}
+[122.723882] (-) TimerEvent: {}
+[122.824678] (-) TimerEvent: {}
+[122.925447] (-) TimerEvent: {}
+[123.026287] (-) TimerEvent: {}
+[123.127072] (-) TimerEvent: {}
+[123.227787] (-) TimerEvent: {}
+[123.328583] (-) TimerEvent: {}
+[123.429359] (-) TimerEvent: {}
+[123.530129] (-) TimerEvent: {}
+[123.630901] (-) TimerEvent: {}
+[123.731652] (-) TimerEvent: {}
+[123.832431] (-) TimerEvent: {}
+[123.933197] (-) TimerEvent: {}
+[124.033946] (-) TimerEvent: {}
+[124.134663] (-) TimerEvent: {}
+[124.235438] (-) TimerEvent: {}
+[124.336220] (-) TimerEvent: {}
+[124.436991] (-) TimerEvent: {}
+[124.537763] (-) TimerEvent: {}
+[124.638484] (-) TimerEvent: {}
+[124.739361] (-) TimerEvent: {}
+[124.839993] (-) TimerEvent: {}
+[124.940670] (-) TimerEvent: {}
+[125.041328] (-) TimerEvent: {}
+[125.141960] (-) TimerEvent: {}
+[125.242632] (-) TimerEvent: {}
+[125.343307] (-) TimerEvent: {}
+[125.443951] (-) TimerEvent: {}
+[125.544634] (-) TimerEvent: {}
+[125.645275] (-) TimerEvent: {}
+[125.745968] (-) TimerEvent: {}
+[125.870944] (-) TimerEvent: {}
+[125.971607] (-) TimerEvent: {}
+[126.072258] (-) TimerEvent: {}
+[126.172932] (-) TimerEvent: {}
+[126.273622] (-) TimerEvent: {}
+[126.374280] (-) TimerEvent: {}
+[126.474951] (-) TimerEvent: {}
+[126.575613] (-) TimerEvent: {}
+[126.676268] (-) TimerEvent: {}
+[126.776895] (-) TimerEvent: {}
+[126.877553] (-) TimerEvent: {}
+[126.978206] (-) TimerEvent: {}
+[127.078884] (-) TimerEvent: {}
+[127.179553] (-) TimerEvent: {}
+[127.280187] (-) TimerEvent: {}
+[127.380839] (-) TimerEvent: {}
+[127.481467] (-) TimerEvent: {}
+[127.582100] (-) TimerEvent: {}
+[127.682755] (-) TimerEvent: {}
+[127.783425] (-) TimerEvent: {}
+[127.884088] (-) TimerEvent: {}
+[127.984695] (-) TimerEvent: {}
+[128.085353] (-) TimerEvent: {}
+[128.185997] (-) TimerEvent: {}
+[128.286647] (-) TimerEvent: {}
+[128.387322] (-) TimerEvent: {}
+[128.487980] (-) TimerEvent: {}
+[128.588638] (-) TimerEvent: {}
+[128.689282] (-) TimerEvent: {}
+[128.789931] (-) TimerEvent: {}
+[128.890549] (-) TimerEvent: {}
+[128.991168] (-) TimerEvent: {}
+[129.091785] (-) TimerEvent: {}
+[129.192435] (-) TimerEvent: {}
+[129.293133] (-) TimerEvent: {}
+[129.393758] (-) TimerEvent: {}
+[129.494370] (-) TimerEvent: {}
+[129.595001] (-) TimerEvent: {}
+[129.695779] (-) TimerEvent: {}
+[129.796533] (-) TimerEvent: {}
+[129.897304] (-) TimerEvent: {}
+[129.998105] (-) TimerEvent: {}
+[130.098917] (-) TimerEvent: {}
+[130.199641] (-) TimerEvent: {}
+[130.300430] (-) TimerEvent: {}
+[130.401230] (-) TimerEvent: {}
+[130.501991] (-) TimerEvent: {}
+[130.602779] (-) TimerEvent: {}
+[130.703606] (-) TimerEvent: {}
+[130.804401] (-) TimerEvent: {}
+[130.905178] (-) TimerEvent: {}
+[131.005972] (-) TimerEvent: {}
+[131.106774] (-) TimerEvent: {}
+[131.207598] (-) TimerEvent: {}
+[131.308413] (-) TimerEvent: {}
+[131.409241] (-) TimerEvent: {}
+[131.510024] (-) TimerEvent: {}
+[131.610780] (-) TimerEvent: {}
+[131.711595] (-) TimerEvent: {}
+[131.812386] (-) TimerEvent: {}
+[131.913197] (-) TimerEvent: {}
+[132.013978] (-) TimerEvent: {}
+[132.114762] (-) TimerEvent: {}
+[132.215605] (-) TimerEvent: {}
+[132.316425] (-) TimerEvent: {}
+[132.417257] (-) TimerEvent: {}
+[132.518061] (-) TimerEvent: {}
+[132.618881] (-) TimerEvent: {}
+[132.719683] (-) TimerEvent: {}
+[132.820482] (-) TimerEvent: {}
+[132.921280] (-) TimerEvent: {}
+[133.022188] (-) TimerEvent: {}
+[133.122972] (-) TimerEvent: {}
+[133.223769] (-) TimerEvent: {}
+[133.324518] (-) TimerEvent: {}
+[133.425300] (-) TimerEvent: {}
+[133.526092] (-) TimerEvent: {}
+[133.626875] (-) TimerEvent: {}
+[133.727633] (-) TimerEvent: {}
+[133.828426] (-) TimerEvent: {}
+[133.929211] (-) TimerEvent: {}
+[134.030023] (-) TimerEvent: {}
+[134.130826] (-) TimerEvent: {}
+[134.231600] (-) TimerEvent: {}
+[134.332382] (-) TimerEvent: {}
+[134.433158] (-) TimerEvent: {}
+[134.533942] (-) TimerEvent: {}
+[134.634723] (-) TimerEvent: {}
+[134.735531] (-) TimerEvent: {}
+[134.836323] (-) TimerEvent: {}
+[134.937131] (-) TimerEvent: {}
+[135.037951] (-) TimerEvent: {}
+[135.138758] (-) TimerEvent: {}
+[135.239610] (-) TimerEvent: {}
+[135.340427] (-) TimerEvent: {}
+[135.441226] (-) TimerEvent: {}
+[135.541983] (-) TimerEvent: {}
+[135.642758] (-) TimerEvent: {}
+[135.743565] (-) TimerEvent: {}
+[135.844361] (-) TimerEvent: {}
+[135.945261] (-) TimerEvent: {}
+[136.046057] (-) TimerEvent: {}
+[136.146873] (-) TimerEvent: {}
+[136.247618] (-) TimerEvent: {}
+[136.348428] (-) TimerEvent: {}
+[136.449234] (-) TimerEvent: {}
+[136.550013] (-) TimerEvent: {}
+[136.650785] (-) TimerEvent: {}
+[136.751576] (-) TimerEvent: {}
+[136.852382] (-) TimerEvent: {}
+[136.953190] (-) TimerEvent: {}
+[137.054025] (-) TimerEvent: {}
+[137.154865] (-) TimerEvent: {}
+[137.255668] (-) TimerEvent: {}
+[137.356493] (-) TimerEvent: {}
+[137.457311] (-) TimerEvent: {}
+[137.558107] (-) TimerEvent: {}
+[137.658937] (-) TimerEvent: {}
+[137.759725] (-) TimerEvent: {}
+[137.860510] (-) TimerEvent: {}
+[137.961295] (-) TimerEvent: {}
+[138.062116] (-) TimerEvent: {}
+[138.162940] (-) TimerEvent: {}
+[138.263737] (-) TimerEvent: {}
+[138.364523] (-) TimerEvent: {}
+[138.465277] (-) TimerEvent: {}
+[138.566065] (-) TimerEvent: {}
+[138.666900] (-) TimerEvent: {}
+[138.767668] (-) TimerEvent: {}
+[138.868449] (-) TimerEvent: {}
+[138.969208] (-) TimerEvent: {}
+[139.070015] (-) TimerEvent: {}
+[139.170846] (-) TimerEvent: {}
+[139.271624] (-) TimerEvent: {}
+[139.372356] (-) TimerEvent: {}
+[139.473099] (-) TimerEvent: {}
+[139.573909] (-) TimerEvent: {}
+[139.674690] (-) TimerEvent: {}
+[139.775495] (-) TimerEvent: {}
+[139.876264] (-) TimerEvent: {}
+[139.977064] (-) TimerEvent: {}
+[140.077852] (-) TimerEvent: {}
+[140.178551] (-) TimerEvent: {}
+[140.279375] (-) TimerEvent: {}
+[140.380098] (-) TimerEvent: {}
+[140.480836] (-) TimerEvent: {}
+[140.581609] (-) TimerEvent: {}
+[140.682384] (-) TimerEvent: {}
+[140.783208] (-) TimerEvent: {}
+[140.883983] (-) TimerEvent: {}
+[140.984723] (-) TimerEvent: {}
+[141.085471] (-) TimerEvent: {}
+[141.187501] (-) TimerEvent: {}
+[141.288279] (-) TimerEvent: {}
+[141.389036] (-) TimerEvent: {}
+[141.489730] (-) TimerEvent: {}
+[141.590415] (-) TimerEvent: {}
+[141.691183] (-) TimerEvent: {}
+[141.791925] (-) TimerEvent: {}
+[141.892652] (-) TimerEvent: {}
+[141.993352] (-) TimerEvent: {}
+[142.093963] (-) TimerEvent: {}
+[142.194614] (-) TimerEvent: {}
+[142.295351] (-) TimerEvent: {}
+[142.396154] (-) TimerEvent: {}
+[142.496949] (-) TimerEvent: {}
+[142.597721] (-) TimerEvent: {}
+[142.698477] (-) TimerEvent: {}
+[142.799259] (-) TimerEvent: {}
+[142.899993] (-) TimerEvent: {}
+[143.000724] (-) TimerEvent: {}
+[143.101419] (-) TimerEvent: {}
+[143.202164] (-) TimerEvent: {}
+[143.302961] (-) TimerEvent: {}
+[143.403734] (-) TimerEvent: {}
+[143.504431] (-) TimerEvent: {}
+[143.605056] (-) TimerEvent: {}
+[143.705714] (-) TimerEvent: {}
+[143.806454] (-) TimerEvent: {}
+[143.907210] (-) TimerEvent: {}
+[144.007977] (-) TimerEvent: {}
+[144.108695] (-) TimerEvent: {}
+[144.209404] (-) TimerEvent: {}
+[144.310163] (-) TimerEvent: {}
+[144.410942] (-) TimerEvent: {}
+[144.511702] (-) TimerEvent: {}
+[144.612356] (-) TimerEvent: {}
+[144.713135] (-) TimerEvent: {}
+[144.813918] (-) TimerEvent: {}
+[144.914657] (-) TimerEvent: {}
+[145.015501] (-) TimerEvent: {}
+[145.116276] (-) TimerEvent: {}
+[145.216952] (-) TimerEvent: {}
+[145.317723] (-) TimerEvent: {}
+[145.418520] (-) TimerEvent: {}
+[145.519350] (-) TimerEvent: {}
+[145.620086] (-) TimerEvent: {}
+[145.720851] (-) TimerEvent: {}
+[145.821656] (-) TimerEvent: {}
+[145.922475] (-) TimerEvent: {}
+[146.023303] (-) TimerEvent: {}
+[146.124084] (-) TimerEvent: {}
+[146.224811] (-) TimerEvent: {}
+[146.325599] (-) TimerEvent: {}
+[146.426376] (-) TimerEvent: {}
+[146.527166] (-) TimerEvent: {}
+[146.627956] (-) TimerEvent: {}
+[146.728744] (-) TimerEvent: {}
+[146.829505] (-) TimerEvent: {}
+[146.930298] (-) TimerEvent: {}
+[147.031174] (-) TimerEvent: {}
+[147.131993] (-) TimerEvent: {}
+[147.232790] (-) TimerEvent: {}
+[147.333592] (-) TimerEvent: {}
+[147.434422] (-) TimerEvent: {}
+[147.535258] (-) TimerEvent: {}
+[147.636062] (-) TimerEvent: {}
+[147.736840] (-) TimerEvent: {}
+[147.837611] (-) TimerEvent: {}
+[147.938415] (-) TimerEvent: {}
+[148.039255] (-) TimerEvent: {}
+[148.140005] (-) TimerEvent: {}
+[148.240781] (-) TimerEvent: {}
+[148.341588] (-) TimerEvent: {}
+[148.442408] (-) TimerEvent: {}
+[148.543192] (-) TimerEvent: {}
+[148.643958] (-) TimerEvent: {}
+[148.744737] (-) TimerEvent: {}
+[148.845522] (-) TimerEvent: {}
+[148.946301] (-) TimerEvent: {}
+[149.047067] (-) TimerEvent: {}
+[149.147827] (-) TimerEvent: {}
+[149.248576] (-) TimerEvent: {}
+[149.349354] (-) TimerEvent: {}
+[149.450147] (-) TimerEvent: {}
+[149.550933] (-) TimerEvent: {}
+[149.651681] (-) TimerEvent: {}
+[149.752445] (-) TimerEvent: {}
+[149.853228] (-) TimerEvent: {}
+[149.954012] (-) TimerEvent: {}
+[150.054835] (-) TimerEvent: {}
+[150.155650] (-) TimerEvent: {}
+[150.256465] (-) TimerEvent: {}
+[150.357277] (-) TimerEvent: {}
+[150.458064] (-) TimerEvent: {}
+[150.558827] (-) TimerEvent: {}
+[150.659603] (-) TimerEvent: {}
+[150.760381] (-) TimerEvent: {}
+[150.861140] (-) TimerEvent: {}
+[150.961930] (-) TimerEvent: {}
+[151.062714] (-) TimerEvent: {}
+[151.163513] (-) TimerEvent: {}
+[151.264312] (-) TimerEvent: {}
+[151.365084] (-) TimerEvent: {}
+[151.465738] (-) TimerEvent: {}
+[151.566369] (-) TimerEvent: {}
+[151.667019] (-) TimerEvent: {}
+[151.767639] (-) TimerEvent: {}
+[151.868278] (-) TimerEvent: {}
+[151.968901] (-) TimerEvent: {}
+[152.069545] (-) TimerEvent: {}
+[152.170173] (-) TimerEvent: {}
+[152.270833] (-) TimerEvent: {}
+[152.371490] (-) TimerEvent: {}
+[152.472118] (-) TimerEvent: {}
+[152.572731] (-) TimerEvent: {}
+[152.673343] (-) TimerEvent: {}
+[152.773906] (-) TimerEvent: {}
+[152.874451] (-) TimerEvent: {}
+[152.975280] (-) TimerEvent: {}
+[153.075908] (-) TimerEvent: {}
+[153.176545] (-) TimerEvent: {}
+[153.277196] (-) TimerEvent: {}
+[153.377824] (-) TimerEvent: {}
+[153.478473] (-) TimerEvent: {}
+[153.579160] (-) TimerEvent: {}
+[153.679852] (-) TimerEvent: {}
+[153.780545] (-) TimerEvent: {}
+[153.881235] (-) TimerEvent: {}
+[153.972736] (zed_components) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libzed_camera_component.so\x1b[0m\n'}
+[153.981364] (-) TimerEvent: {}
+[154.081971] (-) TimerEvent: {}
+[154.182681] (-) TimerEvent: {}
+[154.283404] (-) TimerEvent: {}
+[154.384077] (-) TimerEvent: {}
+[154.484756] (-) TimerEvent: {}
+[154.585479] (-) TimerEvent: {}
+[154.686177] (-) TimerEvent: {}
+[154.786957] (-) TimerEvent: {}
+[154.887638] (-) TimerEvent: {}
+[154.988285] (-) TimerEvent: {}
+[155.089051] (-) TimerEvent: {}
+[155.189717] (-) TimerEvent: {}
+[155.290327] (-) TimerEvent: {}
+[155.321966] (zed_components) StdoutLine: {'line': b'[100%] Built target zed_camera_component\n'}
+[155.350167] (zed_components) CommandEnded: {'returncode': 0}
+[155.352467] (zed_components) JobProgress: {'identifier': 'zed_components', 'progress': 'install'}
+[155.373142] (zed_components) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_components'], 'cwd': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_components', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'wolfwagen'), ('SSH_CLIENT', '10.152.58.3 60231 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('BROWSER', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/wolfwagen'), ('OLDPWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1'), ('TERM_PROGRAM_VERSION', '1.107.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-57d3707e-17ca-4fb3-bfb1-3eb739ef94bd.sock'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'wolfwagen'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422425022489'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '91'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.6/bin:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e72b36d3c5.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_components'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.152.58.3 60231 10.152.19.83 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/wolfwagen/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble')]), 'shell': False}
+[155.390478] (-) TimerEvent: {}
+[155.391208] (zed_components) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[155.392342] (zed_components) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[155.393094] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/lib/libzed_camera_component.so\n'}
+[155.411143] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/lib/libzed_camera_one_component.so\n'}
+[155.430085] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/include/zed_components//cost_traversability.hpp\n'}
+[155.448568] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/include/zed_components//sl_types.hpp\n'}
+[155.467528] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/include/zed_components//zed_camera_component.hpp\n'}
+[155.485038] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/include/zed_components//zed_camera_one_component.hpp\n'}
+[155.490587] (-) TimerEvent: {}
+[155.504937] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/include/zed_components//gnss_replay.hpp\n'}
+[155.524625] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/include/zed_components//json.hpp\n'}
+[155.542296] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/include/zed_components//sl_logging.hpp\n'}
+[155.561066] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/include/zed_components//sl_tools.hpp\n'}
+[155.580247] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/include/zed_components//sl_win_avg.hpp\n'}
+[155.590711] (-) TimerEvent: {}
+[155.599913] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/include/zed_components//visibility_control.hpp\n'}
+[155.618878] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/environment/library_path.sh\n'}
+[155.636836] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/environment/library_path.dsv\n'}
+[155.657652] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/ament_index/resource_index/package_run_dependencies/zed_components\n'}
+[155.676011] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/ament_index/resource_index/parent_prefix_path/zed_components\n'}
+[155.690864] (-) TimerEvent: {}
+[155.693792] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/environment/ament_prefix_path.sh\n'}
+[155.711979] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/environment/ament_prefix_path.dsv\n'}
+[155.729800] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/environment/path.sh\n'}
+[155.747730] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/environment/path.dsv\n'}
+[155.766698] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/local_setup.bash\n'}
+[155.785395] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/local_setup.sh\n'}
+[155.790945] (-) TimerEvent: {}
+[155.804465] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/local_setup.zsh\n'}
+[155.822466] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/local_setup.dsv\n'}
+[155.840571] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/package.dsv\n'}
+[155.861239] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/ament_index/resource_index/packages/zed_components\n'}
+[155.879904] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/ament_index/resource_index/rclcpp_components/zed_components\n'}
+[155.891075] (-) TimerEvent: {}
+[155.898352] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[155.916533] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[155.934716] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[155.952544] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/cmake/zed_componentsConfig.cmake\n'}
+[155.971120] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/cmake/zed_componentsConfig-version.cmake\n'}
+[155.990165] (zed_components) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/share/zed_components/package.xml\n'}
+[155.991157] (-) TimerEvent: {}
+[156.012162] (zed_components) CommandEnded: {'returncode': 0}
+[156.071208] (zed_components) JobEnded: {'identifier': 'zed_components', 'rc': 0}
+[156.075339] (zed_wrapper) JobStarted: {'identifier': 'zed_wrapper'}
+[156.091395] (-) TimerEvent: {}
+[156.092139] (zed_wrapper) JobProgress: {'identifier': 'zed_wrapper', 'progress': 'cmake'}
+[156.093425] (zed_wrapper) Command: {'cmd': ['/usr/bin/cmake', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_wrapper', '-DCMAKE_BUILD_TYPE=Release', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper'], 'cwd': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_wrapper', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'wolfwagen'), ('SSH_CLIENT', '10.152.58.3 60231 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/lib:/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64'), ('BROWSER', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/wolfwagen'), ('OLDPWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1'), ('TERM_PROGRAM_VERSION', '1.107.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-57d3707e-17ca-4fb3-bfb1-3eb739ef94bd.sock'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'wolfwagen'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422425022489'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '91'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.6/bin:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e72b36d3c5.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_wrapper'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.152.58.3 60231 10.152.19.83 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/wolfwagen/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble')]), 'shell': False}
+[156.191592] (-) TimerEvent: {}
+[156.244375] (zed_wrapper) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[156.291771] (-) TimerEvent: {}
+[156.375380] (zed_wrapper) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[156.391926] (-) TimerEvent: {}
+[156.399551] (zed_wrapper) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[156.492114] (-) TimerEvent: {}
+[156.547830] (zed_wrapper) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[156.572867] (zed_wrapper) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[156.575156] (zed_wrapper) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[156.576734] (zed_wrapper) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[156.587817] (zed_wrapper) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[156.592206] (-) TimerEvent: {}
+[156.692834] (-) TimerEvent: {}
+[156.752675] (zed_wrapper) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[156.778622] (zed_wrapper) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[156.779714] (zed_wrapper) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[156.781374] (zed_wrapper) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[156.788739] (zed_wrapper) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.14 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[156.792908] (-) TimerEvent: {}
+[156.893468] (-) TimerEvent: {}
+[156.994103] (-) TimerEvent: {}
+[157.094714] (-) TimerEvent: {}
+[157.116349] (zed_wrapper) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[157.194879] (-) TimerEvent: {}
+[157.243533] (zed_wrapper) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[157.295035] (-) TimerEvent: {}
+[157.395640] (-) TimerEvent: {}
+[157.496254] (-) TimerEvent: {}
+[157.551843] (zed_wrapper) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[157.559332] (zed_wrapper) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[157.573264] (zed_wrapper) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[157.592663] (zed_wrapper) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[157.596296] (-) TimerEvent: {}
+[157.618282] (zed_wrapper) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[157.687571] (zed_wrapper) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[157.691589] (zed_wrapper) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[157.696422] (-) TimerEvent: {}
+[157.797065] (-) TimerEvent: {}
+[157.830752] (zed_wrapper) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[157.887380] (zed_wrapper) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[157.897131] (-) TimerEvent: {}
+[157.959642] (zed_wrapper) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[157.977057] (zed_wrapper) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[157.997283] (-) TimerEvent: {}
+[158.097873] (-) TimerEvent: {}
+[158.116114] (zed_wrapper) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[158.116843] (zed_wrapper) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[158.198057] (-) TimerEvent: {}
+[158.274603] (zed_wrapper) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[158.278403] (zed_wrapper) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[158.298200] (-) TimerEvent: {}
+[158.398841] (-) TimerEvent: {}
+[158.499347] (-) TimerEvent: {}
+[158.599918] (-) TimerEvent: {}
+[158.672196] (zed_wrapper) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[158.674309] (zed_wrapper) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[158.674516] (zed_wrapper) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[158.700009] (-) TimerEvent: {}
+[158.800446] (-) TimerEvent: {}
+[158.900965] (-) TimerEvent: {}
+[159.001540] (-) TimerEvent: {}
+[159.015779] (zed_wrapper) StdoutLine: {'line': b'-- Configuring done\n'}
+[159.028296] (zed_wrapper) StdoutLine: {'line': b'-- Generating done\n'}
+[159.033288] (zed_wrapper) StdoutLine: {'line': b'-- Build files have been written to: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_wrapper\n'}
+[159.060838] (zed_wrapper) CommandEnded: {'returncode': 0}
+[159.062793] (zed_wrapper) JobProgress: {'identifier': 'zed_wrapper', 'progress': 'build'}
+[159.063769] (zed_wrapper) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_wrapper', '--', '-j6', '-l6'], 'cwd': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_wrapper', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'wolfwagen'), ('SSH_CLIENT', '10.152.58.3 60231 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/lib:/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64'), ('BROWSER', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/wolfwagen'), ('OLDPWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1'), ('TERM_PROGRAM_VERSION', '1.107.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-57d3707e-17ca-4fb3-bfb1-3eb739ef94bd.sock'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'wolfwagen'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422425022489'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '91'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.6/bin:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e72b36d3c5.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_wrapper'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.152.58.3 60231 10.152.19.83 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/wolfwagen/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble')]), 'shell': False}
+[159.101719] (-) TimerEvent: {}
+[159.157098] (zed_wrapper) CommandEnded: {'returncode': 0}
+[159.159443] (zed_wrapper) JobProgress: {'identifier': 'zed_wrapper', 'progress': 'install'}
+[159.160285] (zed_wrapper) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_wrapper'], 'cwd': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_wrapper', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'wolfwagen'), ('SSH_CLIENT', '10.152.58.3 60231 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/lib:/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64'), ('BROWSER', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/wolfwagen'), ('OLDPWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1'), ('TERM_PROGRAM_VERSION', '1.107.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-57d3707e-17ca-4fb3-bfb1-3eb739ef94bd.sock'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'wolfwagen'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422425022489'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '91'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.6/bin:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e72b36d3c5.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_wrapper'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.152.58.3 60231 10.152.19.83 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/wolfwagen/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble')]), 'shell': False}
+[159.177687] (zed_wrapper) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[159.178646] (zed_wrapper) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[159.180272] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/config/common_mono.yaml\n'}
+[159.197468] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/config/common_stereo.yaml\n'}
+[159.201779] (-) TimerEvent: {}
+[159.214774] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/config/ffmpeg.yaml\n'}
+[159.232131] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/config/virtual.yaml\n'}
+[159.249434] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/config/zed.yaml\n'}
+[159.266758] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/config/zed2.yaml\n'}
+[159.284005] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/config/zed2i.yaml\n'}
+[159.301139] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/config/zedm.yaml\n'}
+[159.301893] (-) TimerEvent: {}
+[159.320181] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/config/zedx.yaml\n'}
+[159.338740] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/config/zedxm.yaml\n'}
+[159.356429] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/config/zedxone4k.yaml\n'}
+[159.373664] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/config/zedxonegs.yaml\n'}
+[159.391735] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/urdf/include/materials.urdf.xacro\n'}
+[159.402017] (-) TimerEvent: {}
+[159.408884] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/urdf/zed_descr.urdf.xacro\n'}
+[159.427108] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/urdf/zed_macro.urdf.xacro\n'}
+[159.445133] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/launch/zed_camera.launch.py\n'}
+[159.462879] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/ament_index/resource_index/package_run_dependencies/zed_wrapper\n'}
+[159.480626] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/ament_index/resource_index/parent_prefix_path/zed_wrapper\n'}
+[159.498986] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/environment/ament_prefix_path.sh\n'}
+[159.502298] (-) TimerEvent: {}
+[159.516608] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/environment/ament_prefix_path.dsv\n'}
+[159.534211] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/environment/path.sh\n'}
+[159.551927] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/environment/path.dsv\n'}
+[159.568725] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/local_setup.bash\n'}
+[159.587288] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/local_setup.sh\n'}
+[159.602455] (-) TimerEvent: {}
+[159.604734] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/local_setup.zsh\n'}
+[159.622122] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/local_setup.dsv\n'}
+[159.639900] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/package.dsv\n'}
+[159.657224] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/ament_index/resource_index/packages/zed_wrapper\n'}
+[159.677152] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/cmake/zed_wrapperConfig.cmake\n'}
+[159.694404] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/cmake/zed_wrapperConfig-version.cmake\n'}
+[159.702556] (-) TimerEvent: {}
+[159.712923] (zed_wrapper) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper/share/zed_wrapper/package.xml\n'}
+[159.734340] (zed_wrapper) CommandEnded: {'returncode': 0}
+[159.782772] (zed_wrapper) JobEnded: {'identifier': 'zed_wrapper', 'rc': 0}
+[159.785881] (zed_ros2) JobStarted: {'identifier': 'zed_ros2'}
+[159.802718] (-) TimerEvent: {}
+[159.804767] (zed_ros2) JobProgress: {'identifier': 'zed_ros2', 'progress': 'cmake'}
+[159.805873] (zed_ros2) Command: {'cmd': ['/usr/bin/cmake', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/roomba_src/zed-ros2-wrapper/zed_ros2', '-DCMAKE_BUILD_TYPE=Release', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2'], 'cwd': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_ros2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'wolfwagen'), ('SSH_CLIENT', '10.152.58.3 60231 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/lib:/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64'), ('BROWSER', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/wolfwagen'), ('OLDPWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1'), ('TERM_PROGRAM_VERSION', '1.107.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-57d3707e-17ca-4fb3-bfb1-3eb739ef94bd.sock'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'wolfwagen'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422425022489'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '91'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.6/bin:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e72b36d3c5.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_ros2'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.152.58.3 60231 10.152.19.83 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/wolfwagen/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble')]), 'shell': False}
+[159.840519] (zed_ros2) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.14 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[159.903105] (-) TimerEvent: {}
+[160.003676] (-) TimerEvent: {}
+[160.104254] (-) TimerEvent: {}
+[160.189358] (zed_ros2) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[160.204365] (-) TimerEvent: {}
+[160.304933] (-) TimerEvent: {}
+[160.317070] (zed_ros2) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[160.405086] (-) TimerEvent: {}
+[160.505745] (-) TimerEvent: {}
+[160.520645] (zed_ros2) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[160.571713] (zed_ros2) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[160.574467] (zed_ros2) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[160.576638] (zed_ros2) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[160.580990] (zed_ros2) StdoutLine: {'line': b'-- Configuring done\n'}
+[160.589102] (zed_ros2) StdoutLine: {'line': b'-- Generating done\n'}
+[160.593348] (zed_ros2) StdoutLine: {'line': b'-- Build files have been written to: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_ros2\n'}
+[160.599859] (zed_ros2) CommandEnded: {'returncode': 0}
+[160.600915] (zed_ros2) JobProgress: {'identifier': 'zed_ros2', 'progress': 'build'}
+[160.601538] (zed_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_ros2', '--', '-j6', '-l6'], 'cwd': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_ros2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'wolfwagen'), ('SSH_CLIENT', '10.152.58.3 60231 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/lib:/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64'), ('BROWSER', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/wolfwagen'), ('OLDPWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1'), ('TERM_PROGRAM_VERSION', '1.107.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-57d3707e-17ca-4fb3-bfb1-3eb739ef94bd.sock'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'wolfwagen'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422425022489'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '91'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.6/bin:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e72b36d3c5.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_ros2'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.152.58.3 60231 10.152.19.83 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/wolfwagen/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble')]), 'shell': False}
+[160.605799] (-) TimerEvent: {}
+[160.677603] (zed_ros2) CommandEnded: {'returncode': 0}
+[160.679867] (zed_ros2) JobProgress: {'identifier': 'zed_ros2', 'progress': 'install'}
+[160.680396] (zed_ros2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_ros2'], 'cwd': '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_ros2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'wolfwagen'), ('SSH_CLIENT', '10.152.58.3 60231 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components/lib:/usr/local/cuda-12.6/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64'), ('BROWSER', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/wolfwagen'), ('OLDPWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1'), ('TERM_PROGRAM_VERSION', '1.107.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-57d3707e-17ca-4fb3-bfb1-3eb739ef94bd.sock'), ('JETSON_L4T', '36.4.7'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin Nano Engineering Reference Developer Kit Super'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'wolfwagen'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1422425022489'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '91'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda-12.6/bin:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/wolfwagen/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/wolfwagen/.vscode-server/cli/servers/Stable-994fd12f8d3a5aa16f17d42c041e5809167e845a/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e72b36d3c5.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_ros2'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '10.152.58.3 60231 10.152.19.83 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/wolfwagen/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', ''), ('JETSON_P_NUMBER', 'p3767-0005'), ('CMAKE_PREFIX_PATH', '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_wrapper:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_components:/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg:/opt/ros/humble')]), 'shell': False}
+[160.698750] (zed_ros2) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[160.699912] (zed_ros2) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[160.700691] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/ament_index/resource_index/package_run_dependencies/zed_ros2\n'}
+[160.705900] (-) TimerEvent: {}
+[160.719308] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/ament_index/resource_index/parent_prefix_path/zed_ros2\n'}
+[160.737874] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/zed_ros2/environment/ament_prefix_path.sh\n'}
+[160.755926] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/zed_ros2/environment/ament_prefix_path.dsv\n'}
+[160.774157] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/zed_ros2/environment/path.sh\n'}
+[160.792435] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/zed_ros2/environment/path.dsv\n'}
+[160.806018] (-) TimerEvent: {}
+[160.810590] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/zed_ros2/local_setup.bash\n'}
+[160.829419] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/zed_ros2/local_setup.sh\n'}
+[160.847770] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/zed_ros2/local_setup.zsh\n'}
+[160.865309] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/zed_ros2/local_setup.dsv\n'}
+[160.883297] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/zed_ros2/package.dsv\n'}
+[160.903646] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/ament_index/resource_index/packages/zed_ros2\n'}
+[160.906136] (-) TimerEvent: {}
+[160.923573] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/zed_ros2/cmake/zed_ros2Config.cmake\n'}
+[160.942946] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/zed_ros2/cmake/zed_ros2Config-version.cmake\n'}
+[160.960954] (zed_ros2) StdoutLine: {'line': b'-- Symlinking: /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/zed_ros2/share/zed_ros2/package.xml\n'}
+[160.986650] (zed_ros2) CommandEnded: {'returncode': 0}
+[161.006444] (-) TimerEvent: {}
+[161.032327] (zed_ros2) JobEnded: {'identifier': 'zed_ros2', 'rc': 0}
+[161.034533] (-) EventReactorShutdown: {}

@@ -1,0 +1,7 @@
+[0.562s] Invoking command in '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/unitree_lidar_sdk': /usr/bin/cmake --build /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/unitree_lidar_sdk -- -j6 -l6
+[0.683s] [ 20%] Built target set_to_serial_mode
+[0.684s] [ 60%] Built target example_lidar_serial
+[0.684s] [ 60%] Built target set_to_udp_mode
+[0.696s] [ 80%] Built target set_ip_address
+[0.708s] [100%] Built target example_lidar_udp
+[0.735s] Invoked command in '/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/unitree_lidar_sdk' returned '0': /usr/bin/cmake --build /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/unitree_lidar_sdk -- -j6 -l6

@@ -1,0 +1,14 @@
+running develop
+running egg_info
+writing first_roomba_pkg.egg-info/PKG-INFO
+writing dependency_links to first_roomba_pkg.egg-info/dependency_links.txt
+writing entry points to first_roomba_pkg.egg-info/entry_points.txt
+writing requirements to first_roomba_pkg.egg-info/requires.txt
+writing top-level names to first_roomba_pkg.egg-info/top_level.txt
+reading manifest file 'first_roomba_pkg.egg-info/SOURCES.txt'
+writing manifest file 'first_roomba_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/install/first_roomba_pkg/lib/python3.10/site-packages/first-roomba-pkg.egg-link (link to .)
+
+Installed /home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/first_roomba_pkg
+running symlink_data
