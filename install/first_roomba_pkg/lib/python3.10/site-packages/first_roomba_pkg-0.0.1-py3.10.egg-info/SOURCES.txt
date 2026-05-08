@@ -17,7 +17,6 @@ first_roomba_pkg/lidar_node.py
 first_roomba_pkg/test.py
 first_roomba_pkg/xbox_controller_node.py
 launch/rtabmap_launch.py
-launch/test.launch.py
 resource/first_roomba_pkg
 rviz/rtabmap_rviz.rviz
 test/test_copyright.py

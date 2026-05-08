@@ -38,6 +38,9 @@ setup(
             'lidar_node   = first_roomba_pkg.lidar_node:main',
             'xbox_controller_node = first_roomba_pkg.xbox_controller_node:main',  # ← add
             'driver_node          = first_roomba_pkg.driver_node:main',            # ← add
+
+
+            'test = first_roomba_pkg.test:main',
         ],
     },
 
