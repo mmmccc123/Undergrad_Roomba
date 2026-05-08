@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/unitree_lidar_ros2/unitree_lidar_ros2_node" "TARGETS" "unitree_lidar_ros2_node" "DESTINATION" "lib/unitree_lidar_ros2")

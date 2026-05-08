@@ -1,1 +1,0 @@
-/home/wolfwagen/Undergrad_Minchan_Folder/ROOMBA_PROJECT_1/build/zed_wrapper/ament_cmake_environment_hooks/local_setup.sh
