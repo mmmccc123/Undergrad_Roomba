@@ -1,0 +1,1 @@
+/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/custom_model/ament_cmake_environment_hooks/local_setup.zsh

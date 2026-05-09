@@ -1,0 +1,346 @@
+[0.054s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.054s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x76f2f7772b00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x76f2f7772620>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x76f2f7772620>>, mixin_verb=('build',))
+[0.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.142s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.142s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extensions ['colcon_pkg']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'colcon_pkg'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extensions ['colcon_meta']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'colcon_meta'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extensions ['ros']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'ros'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extensions ['cmake', 'python']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'cmake'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'python'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extensions ['python_setup_py']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'python_setup_py'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_bringup) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_bringup) by extension 'ignore_ament_install'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_bringup) by extensions ['colcon_pkg']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_bringup) by extension 'colcon_pkg'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_bringup) by extensions ['colcon_meta']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_bringup) by extension 'colcon_meta'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_bringup) by extensions ['ros']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_bringup) by extension 'ros'
+[0.151s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot4_simulator/turtlebot4_ignition_bringup' with type 'ros.ament_cmake' and name 'turtlebot4_ignition_bringup'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins) by extensions ['colcon_pkg']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins) by extensions ['colcon_meta']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins) by extension 'colcon_meta'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins) by extensions ['ros']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins) by extension 'ros'
+[0.151s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins' with type 'ros.ament_cmake' and name 'turtlebot4_ignition_gui_plugins'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_toolbox) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_toolbox) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_toolbox) by extension 'ignore_ament_install'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_toolbox) by extensions ['colcon_pkg']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_toolbox) by extension 'colcon_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_toolbox) by extensions ['colcon_meta']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_toolbox) by extension 'colcon_meta'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_toolbox) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_ignition_toolbox) by extension 'ros'
+[0.156s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot4_simulator/turtlebot4_ignition_toolbox' with type 'ros.ament_cmake' and name 'turtlebot4_ignition_toolbox'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extension 'ros'
+[0.157s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot4_simulator/turtlebot4_simulator' with type 'ros.ament_cmake' and name 'turtlebot4_simulator'
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.167s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.167s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.168s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install
+[0.169s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 406 installed packages in /opt/ros/humble
+[0.170s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_gui_plugins' build argument 'cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_gui_plugins' build argument 'cmake_target' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_gui_plugins' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_gui_plugins' build argument 'cmake_clean_cache' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_gui_plugins' build argument 'cmake_clean_first' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_gui_plugins' build argument 'cmake_force_configure' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_gui_plugins' build argument 'ament_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_gui_plugins' build argument 'catkin_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_gui_plugins' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.193s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot4_ignition_gui_plugins' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_gui_plugins', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins', 'merge_install': False, 'path': '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins', 'symlink_install': True, 'test_result_base': None}
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_toolbox' build argument 'cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_toolbox' build argument 'cmake_target' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_toolbox' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_toolbox' build argument 'cmake_clean_cache' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_toolbox' build argument 'cmake_clean_first' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_toolbox' build argument 'cmake_force_configure' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_toolbox' build argument 'ament_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_toolbox' build argument 'catkin_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_toolbox' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.193s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot4_ignition_toolbox' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox', 'merge_install': False, 'path': '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_toolbox', 'symlink_install': True, 'test_result_base': None}
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_bringup' build argument 'cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_bringup' build argument 'cmake_target' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_ignition_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.193s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot4_ignition_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup', 'merge_install': False, 'path': '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_simulator' build argument 'cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_simulator' build argument 'cmake_target' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_simulator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_simulator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_simulator' build argument 'cmake_clean_first' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_simulator' build argument 'cmake_force_configure' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_simulator' build argument 'ament_cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_simulator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'turtlebot4_simulator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.194s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot4_simulator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_simulator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator', 'merge_install': False, 'path': '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_simulator', 'symlink_install': True, 'test_result_base': None}
+[0.194s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.194s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.195s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins' with build type 'ament_cmake'
+[0.195s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins'
+[0.196s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.196s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.196s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.198s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_toolbox' with build type 'ament_cmake'
+[0.198s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_toolbox'
+[0.198s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.198s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.201s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_gui_plugins': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins
+[0.203s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_toolbox -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox
+[0.501s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_gui_plugins' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_gui_plugins -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins
+[0.502s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_gui_plugins': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_gui_plugins -- -j32 -l32
+[0.504s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_toolbox -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox
+[0.505s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox -- -j32 -l32
+[0.571s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_gui_plugins' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_gui_plugins -- -j32 -l32
+[0.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_gui_plugins': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_gui_plugins
+[0.655s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot4_ignition_gui_plugins)
+[0.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_gui_plugins' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_gui_plugins
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins' for CMake module files
+[0.658s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins' for CMake config files
+[0.658s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot4_ignition_gui_plugins', 'cmake_prefix_path')
+[0.658s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/hook/cmake_prefix_path.ps1'
+[0.659s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/hook/cmake_prefix_path.dsv'
+[0.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/hook/cmake_prefix_path.sh'
+[0.660s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/bin'
+[0.660s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/lib/pkgconfig/turtlebot4_ignition_gui_plugins.pc'
+[0.660s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/lib/python3.10/site-packages'
+[0.660s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/bin'
+[0.660s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/package.ps1'
+[0.661s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/package.dsv'
+[0.661s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/package.sh'
+[0.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/package.bash'
+[0.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/package.zsh'
+[0.663s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/colcon-core/packages/turtlebot4_ignition_gui_plugins)
+[0.663s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot4_ignition_gui_plugins)
+[0.663s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins' for CMake module files
+[0.664s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins' for CMake config files
+[0.664s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot4_ignition_gui_plugins', 'cmake_prefix_path')
+[0.664s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/hook/cmake_prefix_path.ps1'
+[0.668s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/hook/cmake_prefix_path.dsv'
+[0.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/hook/cmake_prefix_path.sh'
+[0.668s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/bin'
+[0.668s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/lib/pkgconfig/turtlebot4_ignition_gui_plugins.pc'
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/lib/python3.10/site-packages'
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/bin'
+[0.669s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/package.ps1'
+[0.670s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/package.dsv'
+[0.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/package.sh'
+[0.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/package.bash'
+[0.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/turtlebot4_ignition_gui_plugins/package.zsh'
+[0.671s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins/share/colcon-core/packages/turtlebot4_ignition_gui_plugins)
+[0.841s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox -- -j32 -l32
+[0.841s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox
+[0.927s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot4_ignition_toolbox)
+[0.928s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox' for CMake module files
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox' for CMake config files
+[0.929s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot4_ignition_toolbox', 'cmake_prefix_path')
+[0.929s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/hook/cmake_prefix_path.ps1'
+[0.929s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/hook/cmake_prefix_path.dsv'
+[0.929s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/hook/cmake_prefix_path.sh'
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/lib'
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/bin'
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/lib/pkgconfig/turtlebot4_ignition_toolbox.pc'
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/lib/python3.10/site-packages'
+[0.930s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/bin'
+[0.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/package.ps1'
+[0.931s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/package.dsv'
+[0.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/package.sh'
+[0.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/package.bash'
+[0.932s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/package.zsh'
+[0.932s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/colcon-core/packages/turtlebot4_ignition_toolbox)
+[0.932s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot4_ignition_toolbox)
+[0.932s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox' for CMake module files
+[0.933s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox' for CMake config files
+[0.933s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot4_ignition_toolbox', 'cmake_prefix_path')
+[0.933s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/hook/cmake_prefix_path.ps1'
+[0.933s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/hook/cmake_prefix_path.dsv'
+[0.934s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/hook/cmake_prefix_path.sh'
+[0.934s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/lib'
+[0.934s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/bin'
+[0.934s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/lib/pkgconfig/turtlebot4_ignition_toolbox.pc'
+[0.934s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/lib/python3.10/site-packages'
+[0.934s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/bin'
+[0.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/package.ps1'
+[0.935s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/package.dsv'
+[0.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/package.sh'
+[0.936s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/package.bash'
+[0.936s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/package.zsh'
+[0.936s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/colcon-core/packages/turtlebot4_ignition_toolbox)
+[0.936s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_bringup' with build type 'ament_cmake'
+[0.936s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_bringup'
+[0.937s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.937s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.943s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_bringup': CMAKE_PREFIX_PATH=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup:/opt/ros/humble /usr/bin/cmake /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup
+[1.119s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_bringup' returned '0': CMAKE_PREFIX_PATH=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup:/opt/ros/humble /usr/bin/cmake /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_ignition_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup
+[1.119s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_bringup': CMAKE_PREFIX_PATH=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup:/opt/ros/humble /usr/bin/cmake --build /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_bringup -- -j32 -l32
+[1.144s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_bringup' returned '0': CMAKE_PREFIX_PATH=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup:/opt/ros/humble /usr/bin/cmake --build /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_bringup -- -j32 -l32
+[1.145s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_bringup': CMAKE_PREFIX_PATH=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup:/opt/ros/humble /usr/bin/cmake --install /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_bringup
+[1.268s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot4_ignition_bringup)
+[1.269s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup' for CMake module files
+[1.269s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_bringup' returned '0': CMAKE_PREFIX_PATH=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup:/opt/ros/humble /usr/bin/cmake --install /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_bringup
+[1.269s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup' for CMake config files
+[1.270s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot4_ignition_bringup', 'cmake_prefix_path')
+[1.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/hook/cmake_prefix_path.ps1'
+[1.270s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/hook/cmake_prefix_path.dsv'
+[1.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/hook/cmake_prefix_path.sh'
+[1.271s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/bin'
+[1.271s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/lib/pkgconfig/turtlebot4_ignition_bringup.pc'
+[1.271s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/lib/python3.10/site-packages'
+[1.271s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/bin'
+[1.271s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/package.ps1'
+[1.272s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/package.dsv'
+[1.272s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/package.sh'
+[1.272s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/package.bash'
+[1.273s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/package.zsh'
+[1.273s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/colcon-core/packages/turtlebot4_ignition_bringup)
+[1.273s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot4_ignition_bringup)
+[1.273s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup' for CMake module files
+[1.274s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup' for CMake config files
+[1.274s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot4_ignition_bringup', 'cmake_prefix_path')
+[1.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/hook/cmake_prefix_path.ps1'
+[1.279s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/hook/cmake_prefix_path.dsv'
+[1.280s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/hook/cmake_prefix_path.sh'
+[1.280s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/bin'
+[1.280s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/lib/pkgconfig/turtlebot4_ignition_bringup.pc'
+[1.280s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/lib/python3.10/site-packages'
+[1.280s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/bin'
+[1.280s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/package.ps1'
+[1.280s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/package.dsv'
+[1.281s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/package.sh'
+[1.281s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/package.bash'
+[1.281s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/turtlebot4_ignition_bringup/package.zsh'
+[1.281s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup/share/colcon-core/packages/turtlebot4_ignition_bringup)
+[1.281s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_simulator' with build type 'ament_cmake'
+[1.281s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_simulator'
+[1.281s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.281s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.287s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_simulator': CMAKE_PREFIX_PATH=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator:/opt/ros/humble /usr/bin/cmake /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_simulator -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator
+[1.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_simulator' returned '0': CMAKE_PREFIX_PATH=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator:/opt/ros/humble /usr/bin/cmake /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/src/turtlebot4_simulator/turtlebot4_simulator -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator
+[1.402s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_simulator': CMAKE_PREFIX_PATH=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator:/opt/ros/humble /usr/bin/cmake --build /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_simulator -- -j32 -l32
+[1.422s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_simulator' returned '0': CMAKE_PREFIX_PATH=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator:/opt/ros/humble /usr/bin/cmake --build /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_simulator -- -j32 -l32
+[1.423s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_simulator': CMAKE_PREFIX_PATH=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator:/opt/ros/humble /usr/bin/cmake --install /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_simulator
+[1.499s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot4_simulator)
+[1.499s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator' for CMake module files
+[1.499s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator' for CMake config files
+[1.499s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_simulator' returned '0': CMAKE_PREFIX_PATH=/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_bringup:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_gui_plugins:/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator:/opt/ros/humble /usr/bin/cmake --install /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_simulator
+[1.500s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot4_simulator', 'cmake_prefix_path')
+[1.500s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/hook/cmake_prefix_path.ps1'
+[1.500s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/hook/cmake_prefix_path.dsv'
+[1.500s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/hook/cmake_prefix_path.sh'
+[1.501s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/bin'
+[1.501s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/lib/pkgconfig/turtlebot4_simulator.pc'
+[1.501s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/lib/python3.10/site-packages'
+[1.501s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/bin'
+[1.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/package.ps1'
+[1.501s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/package.dsv'
+[1.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/package.sh'
+[1.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/package.bash'
+[1.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/package.zsh'
+[1.502s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/colcon-core/packages/turtlebot4_simulator)
+[1.502s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot4_simulator)
+[1.502s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator' for CMake module files
+[1.502s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator' for CMake config files
+[1.502s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot4_simulator', 'cmake_prefix_path')
+[1.502s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/hook/cmake_prefix_path.ps1'
+[1.503s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/hook/cmake_prefix_path.dsv'
+[1.503s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/hook/cmake_prefix_path.sh'
+[1.503s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/bin'
+[1.503s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/lib/pkgconfig/turtlebot4_simulator.pc'
+[1.503s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/lib/python3.10/site-packages'
+[1.503s] Level 1:colcon.colcon_core.environment:checking '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/bin'
+[1.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/package.ps1'
+[1.503s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/package.dsv'
+[1.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/package.sh'
+[1.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/package.bash'
+[1.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/turtlebot4_simulator/package.zsh'
+[1.504s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_simulator/share/colcon-core/packages/turtlebot4_simulator)
+[1.504s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.504s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.505s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.505s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.505s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.505s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/local_setup.ps1'
+[1.505s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/_local_setup_util_ps1.py'
+[1.506s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/setup.ps1'
+[1.506s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/local_setup.sh'
+[1.507s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/_local_setup_util_sh.py'
+[1.507s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/setup.sh'
+[1.507s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/local_setup.bash'
+[1.507s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/setup.bash'
+[1.508s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/local_setup.zsh'
+[1.508s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/setup.zsh'

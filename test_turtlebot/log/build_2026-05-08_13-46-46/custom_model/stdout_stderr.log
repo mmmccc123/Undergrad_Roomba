@@ -1,0 +1,27 @@
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/custom_model
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/urdf/minchan_turtlebot4.urdf.xacro
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/urdf/sensors/unilidar_l2.urdf.xacro
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/urdf/sensors/zed.urdf.xacro
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/launch/custom_spawn.launch.py
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/launch/robot_description.launch.py
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/ament_index/resource_index/package_run_dependencies/custom_model
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/ament_index/resource_index/parent_prefix_path/custom_model
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/environment/ament_prefix_path.sh
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/environment/ament_prefix_path.dsv
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/environment/path.sh
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/environment/path.dsv
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/local_setup.bash
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/local_setup.sh
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/local_setup.zsh
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/local_setup.dsv
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/package.dsv
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/ament_index/resource_index/packages/custom_model
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/cmake/custom_modelConfig.cmake
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/cmake/custom_modelConfig-version.cmake
+-- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/custom_model/share/custom_model/package.xml

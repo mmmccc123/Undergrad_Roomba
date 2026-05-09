@@ -1,0 +1,25 @@
+[0.005s] Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mkim56/Undergrad_Minchan_Folder/Undergrad_Roomba/install/first_roomba_pkg:/opt/ros/humble /usr/bin/cmake --build /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox -- -j32 -l32
+[0.040s] [ 60%] Built target turtlebot4_ignition_toolbox_lib
+[0.055s] [100%] Built target turtlebot4_ignition_hmi_node
+[0.061s] Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mkim56/Undergrad_Minchan_Folder/Undergrad_Roomba/install/first_roomba_pkg:/opt/ros/humble /usr/bin/cmake --build /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox -- -j32 -l32
+[0.067s] Invoking command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mkim56/Undergrad_Minchan_Folder/Undergrad_Roomba/install/first_roomba_pkg:/opt/ros/humble /usr/bin/cmake --install /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox
+[0.070s] -- Install configuration: ""
+[0.070s] -- Execute custom install script
+[0.070s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/lib/turtlebot4_ignition_toolbox/turtlebot4_ignition_hmi_node
+[0.071s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/ament_index/resource_index/package_run_dependencies/turtlebot4_ignition_toolbox
+[0.071s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/ament_index/resource_index/parent_prefix_path/turtlebot4_ignition_toolbox
+[0.071s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/environment/ament_prefix_path.sh
+[0.071s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/environment/ament_prefix_path.dsv
+[0.071s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/environment/path.sh
+[0.071s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/environment/path.dsv
+[0.071s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/local_setup.bash
+[0.071s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/local_setup.sh
+[0.071s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/local_setup.zsh
+[0.071s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/local_setup.dsv
+[0.071s] -- Symlinking: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/package.dsv
+[0.076s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/ament_index/resource_index/packages/turtlebot4_ignition_toolbox
+[0.076s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.076s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/cmake/turtlebot4_ignition_toolboxConfig.cmake
+[0.076s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/cmake/turtlebot4_ignition_toolboxConfig-version.cmake
+[0.076s] -- Up-to-date symlink: /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/install/turtlebot4_ignition_toolbox/share/turtlebot4_ignition_toolbox/package.xml
+[0.077s] Invoked command in '/home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mkim56/Undergrad_Minchan_Folder/Undergrad_Roomba/install/first_roomba_pkg:/opt/ros/humble /usr/bin/cmake --install /home/mkim56/Undergrad_Minchan_Folder/test_turtlebot/build/turtlebot4_ignition_toolbox
