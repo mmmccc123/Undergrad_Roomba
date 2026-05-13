@@ -1,9 +1,16 @@
 Panels:
   - Class: rviz_common/Displays
-    Help Height: 78
+    Help Height: 0
     Name: Displays
     Property Tree Widget:
-      Expanded: ~
+      Expanded:
+        - /Global Options1
+        - /PointCloud21
+        - /Image1
+        - /Image1/Topic1
+        - /RobotModel1
+        - /RobotModel1/Mass Properties1
+        - /TF1
       Splitter Ratio: 0.5
     Tree Height: 355
   - Class: rviz_common/Selection
@@ -22,7 +29,7 @@ Panels:
   - Class: rviz_common/Time
     Experimental: false
     Name: Time
-    SyncMode: 0
+    SyncMode: 1
     SyncSource: ""
 Visualization Manager:
   Class: ""
@@ -55,16 +62,16 @@ Visualization Manager:
       Channel Name: intensity
       Class: rviz_default_plugins/PointCloud2
       Color: 255; 255; 255
-      Color Transformer: ""
-      Decay Time: 0
+      Color Transformer: Intensity
+      Decay Time: 9
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 4096
+      Max Intensity: 255
       Min Color: 0; 0; 0
-      Min Intensity: 0
+      Min Intensity: 24
       Name: PointCloud2
-      Position Transformer: ""
+      Position Transformer: XYZ
       Selectable: true
       Size (Pixels): 3
       Size (m): 0.009999999776482582
@@ -75,12 +82,12 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: ""
+        Value: /unilidar/cloud
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
     - Class: rviz_default_plugins/Camera
-      Enabled: true
+      Enabled: false
       Far Plane Distance: 100
       Image Rendering: background and overlay
       Name: Camera
@@ -91,11 +98,14 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: ""
-      Value: true
+      Value: false
       Visibility:
         Grid: true
+        Image: true
         Path: true
         PointCloud2: true
+        RobotModel: true
+        TF: true
         Value: true
       Zoom Factor: 1
     - Alpha: 1
@@ -126,10 +136,369 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: ""
       Value: true
+    - Class: rviz_default_plugins/Image
+      Enabled: true
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /zed/zed_node/left_gray/image_rect_gray
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        bump_front_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        bump_front_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        bump_front_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        bump_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        bump_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        bumper:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        button_1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        button_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        button_power:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cliff_front_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cliff_front_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cliff_side_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cliff_side_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        front_caster_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ir_intensity_front_center_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ir_intensity_front_center_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ir_intensity_front_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ir_intensity_front_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ir_intensity_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ir_intensity_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ir_intensity_side_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ir_omni:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mouse:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        unilidar_l2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        wheel_drop_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        wheel_drop_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        zed_camera_bracket:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        zed_camera_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        zed_imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        zed_left_camera_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        zed_left_camera_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        zed_right_camera_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        zed_right_camera_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Mass Properties:
+        Inertia: true
+        Mass: true
+      Name: RobotModel
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        base_footprint:
+          Value: true
+        base_link:
+          Value: true
+        bump_front_center:
+          Value: true
+        bump_front_left:
+          Value: true
+        bump_front_right:
+          Value: true
+        bump_left:
+          Value: true
+        bump_right:
+          Value: true
+        bumper:
+          Value: true
+        button_1:
+          Value: true
+        button_2:
+          Value: true
+        button_power:
+          Value: true
+        cliff_front_left:
+          Value: true
+        cliff_front_right:
+          Value: true
+        cliff_side_left:
+          Value: true
+        cliff_side_right:
+          Value: true
+        front_caster_link:
+          Value: true
+        imu:
+          Value: true
+        imu_link:
+          Value: true
+        ir_intensity_front_center_left:
+          Value: true
+        ir_intensity_front_center_right:
+          Value: true
+        ir_intensity_front_left:
+          Value: true
+        ir_intensity_front_right:
+          Value: true
+        ir_intensity_left:
+          Value: true
+        ir_intensity_right:
+          Value: true
+        ir_intensity_side_left:
+          Value: true
+        ir_omni:
+          Value: true
+        left_wheel:
+          Value: true
+        mouse:
+          Value: true
+        odom:
+          Value: true
+        right_wheel:
+          Value: true
+        unilidar_imu_initial:
+          Value: true
+        unilidar_l2_link:
+          Value: true
+        zed_camera_bracket:
+          Value: true
+        zed_camera_center:
+          Value: true
+        zed_imu_link:
+          Value: true
+        zed_left_camera_frame:
+          Value: true
+        zed_left_camera_optical_frame:
+          Value: true
+        zed_right_camera_frame:
+          Value: true
+        zed_right_camera_optical_frame:
+          Value: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        odom:
+          base_footprint:
+            {}
+          base_link:
+            bump_front_center:
+              {}
+            bump_front_left:
+              {}
+            bump_front_right:
+              {}
+            bump_left:
+              {}
+            bump_right:
+              {}
+            bumper:
+              {}
+            button_1:
+              {}
+            button_2:
+              {}
+            button_power:
+              {}
+            cliff_front_left:
+              {}
+            cliff_front_right:
+              {}
+            cliff_side_left:
+              {}
+            cliff_side_right:
+              {}
+            front_caster_link:
+              {}
+            imu:
+              {}
+            imu_link:
+              {}
+            ir_intensity_front_center_left:
+              {}
+            ir_intensity_front_center_right:
+              {}
+            ir_intensity_front_left:
+              {}
+            ir_intensity_front_right:
+              {}
+            ir_intensity_left:
+              {}
+            ir_intensity_right:
+              {}
+            ir_intensity_side_left:
+              {}
+            ir_omni:
+              {}
+            left_wheel:
+              {}
+            mouse:
+              {}
+            right_wheel:
+              {}
+            unilidar_imu_initial:
+              {}
+            unilidar_l2_link:
+              {}
+            zed_camera_bracket:
+              zed_camera_center:
+                zed_imu_link:
+                  {}
+                zed_left_camera_frame:
+                  zed_left_camera_optical_frame:
+                    {}
+                zed_right_camera_frame:
+                  zed_right_camera_optical_frame:
+                    {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: map
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:
@@ -172,25 +541,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/ThirdPersonFollower
-      Distance: 23.33772850036621
+      Distance: 2.429365634918213
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -2.0637495517730713
-        Y: 2.6920015811920166
+        X: -0.04044008255004883
+        Y: -0.02074909210205078
         Z: 0
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.2547961473464966
+      Pitch: 0.28020328283309937
       Target Frame: <Fixed Frame>
       Value: ThirdPersonFollower (rviz_default_plugins)
-      Yaw: 2.879199981689453
+      Yaw: 2.160886526107788
     Saved: ~
 Window Geometry:
   Camera:
@@ -199,8 +568,10 @@ Window Geometry:
     collapsed: false
   Height: 846
   Hide Left Dock: false
-  Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd000000040000000000000156000002b0fc0200000009fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000001ee000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d0065007200610100000231000000bc0000002800ffffff000000010000010f000002b0fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d000002b0000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004b00000003efc0100000002fb0000000800540069006d00650100000000000004b0000002fb00fffffffb0000000800540069006d006501000000000000045000000000000000000000023f000002b000000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Hide Right Dock: true
+  Image:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd00000004000000000000022a000002b0fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000001a0000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d00650072006100000001a5000000860000002800fffffffb0000000a0049006d00610067006501000001e30000010a0000002800ffffff000000010000010f000002b0fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d000002b0000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004f60000003efc0100000002fb0000000800540069006d00650100000000000004f6000002fb00fffffffb0000000800540069006d00650100000000000004500000000000000000000002c6000002b000000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -209,6 +580,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1200
-  X: 307
-  Y: 122
+  Width: 1270
+  X: 255
+  Y: 67

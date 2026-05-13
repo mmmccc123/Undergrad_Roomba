@@ -11,7 +11,7 @@ class TeleopRoomba(Node):
         super().__init__('teleop_roomba')
         # This matches the working 'pub' command exactly
         qos = QoSProfile(reliability=ReliabilityPolicy.BEST_EFFORT, depth=10)
-        self.publisher_ = self.create_publisher(Twist, '/minchan/cmd_vel', qos)
+        self.publisher_ = self.create_publisher(Twist, '/cmd_vel', qos)
         print("--- Node Started. Use W-A-S-D to drive. Press 'q' to quit. ---")
 
     def send_cmd(self, x, z):

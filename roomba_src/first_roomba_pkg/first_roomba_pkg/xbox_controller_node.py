@@ -1,48 +1,53 @@
 #!/usr/bin/env python3
-
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
 from geometry_msgs.msg import Twist
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 
-MAX_LINEAR  = 0.22   # m/s  (Burger max)
-MAX_ANGULAR = 2.84   # rad/s (Burger max)
-
-class XboxTurtleBot(Node):
+class XboxRoomba(Node):
     def __init__(self):
-        super().__init__('xbox_turtlebot')
+        super().__init__('xbox_roomba')
+        
+        # This is the EXACT QoS that made your echo work
+        qos_profile = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=1,
+            durability=DurabilityPolicy.VOLATILE
+        )
 
-        self.cmd_pub = self.create_publisher(Twist, 'minchan/cmd_vel', 10)
+        self.cmd_pub = self.create_publisher(Twist, '/cmd_vel', qos_profile)
         self.joy_sub = self.create_subscription(Joy, 'joy', self.joy_callback, 10)
-
-        self.get_logger().info('Xbox TurtleBot node started')
+        
+        # CRITICAL: Send a command every 0.05s (20Hz) to keep the robot awake
+        self.timer = self.create_timer(0.05, self.timer_publish)
+        
+        self.current_twist = Twist()
+        self.get_logger().info('Communication Link Established. Ready to Drive!')
 
     def joy_callback(self, msg):
-        a_button = msg.buttons[7] == 1  # turbo
-        speed_scale = 1.0 if a_button else 0.3
+        # Scale: Use A-button (buttons[0]) or Right Bumper (buttons[5]) for Turbo
+        # Standard Xbox: Axes 1 = Left Stick Up/Down, Axes 3 = Right Stick Left/Right
+        turbo = 1.0 if msg.buttons[0] == 1 else 0.4
+        
+        self.current_twist.linear.x = msg.axes[1] * 0.3 * turbo
+        self.current_twist.angular.z = msg.axes[3] * 1.5 * turbo
 
-        # Left stick Y = forward/back, Right stick X = turn
-        linear_x  = msg.axes[1] * MAX_LINEAR  * speed_scale
-        angular_z = msg.axes[3] * MAX_ANGULAR * speed_scale
-
-        twist = Twist()
-        twist.linear.x  = linear_x
-        twist.angular.z = angular_z
-
-        self.cmd_pub.publish(twist)
-
+    def timer_publish(self):
+        # Robot needs a continuous stream of data
+        self.cmd_pub.publish(self.current_twist)
 
 def main():
     rclpy.init()
-    node = XboxTurtleBot()
+    node = XboxRoomba()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
-        pass
-    finally:
-        # Send stop on exit
+        # Send one last stop command
         stop = Twist()
         node.cmd_pub.publish(stop)
+    finally:
         rclpy.shutdown()
 
 if __name__ == '__main__':

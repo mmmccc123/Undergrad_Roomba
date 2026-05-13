@@ -22,6 +22,10 @@ setup(
         (os.path.join('share', package_name, 'config'),
             glob('config/*.yaml')),
             
+        # Install URDF files
+        (os.path.join('share', package_name, 'urdf'), glob('urdf/*.xacro')),
+        (os.path.join('share', package_name, 'urdf/sensors'), glob('urdf/sensors/*.xacro')),
+            
         # ✅ Add this line:
         (os.path.join('share', package_name, 'rviz'), glob('rviz/*.rviz')),
     ],

@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:macro name="zed_camera" params="name:=zed parent_link *origin model:=zed2i gazebo:=none">
+  <xacro:include filename="$(find irobot_create_description)/urdf/common_properties.urdf.xacro"/>
+
+  <xacro:property name="mass"         value="0.127"/>
+  <!-- ZED 2i baseline: 120 mm -->
+  <xacro:property name="baseline"     value="0.120"/>
+  <xacro:property name="M_PI"         value="3.1415926535897931"/>
+
+  <!-- Collision box approximation -->
+  <xacro:property name="col_x"        value="0.033"/>
+  <xacro:property name="col_y"        value="0.175"/>
+  <xacro:property name="col_z"        value="0.030"/>
+
+  <xacro:property name="base_frame"   value="${name}_camera_center"/>
+
+  <!-- ── Base / center frame ── -->
+  <joint name="${name}_joint" type="fixed">
+    <parent link="${parent_link}"/>
+    <child link="${base_frame}"/>
+    <xacro:insert_block name="origin"/>
+  </joint>
+
+  <link name="${base_frame}">
+    <visual>
+      <geometry>
+        <!-- Drop in a real .dae if you have the ZED ROS2 wrapper meshes -->
+        <box size="${col_x} ${col_y} ${col_z}"/>
+      </geometry>
+      <material name="zed_gray">
+        <color rgba="0.15 0.15 0.15 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${col_x} ${col_y} ${col_z}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="${mass}"/>
+      <inertia ixx="0.00007" ixy="0.0" ixz="0.0"
+               iyy="0.00007" iyz="0.0" izz="0.00007"/>
+    </inertial>
+  </link>
+
+  <!-- ── Left camera ── -->
+  <link name="${name}_left_camera_frame">
+    <xacro:inertial_dummy/>
+  </link>
+  <joint name="${name}_left_camera_joint" type="fixed">
+    <parent link="${base_frame}"/>
+    <child link="${name}_left_camera_frame"/>
+    <origin xyz="0 ${baseline/2} 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="${name}_left_camera_optical_frame">
+    <xacro:inertial_dummy/>
+  </link>
+  <joint name="${name}_left_camera_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-${M_PI/2} 0.0 -${M_PI/2}"/>
+    <parent link="${name}_left_camera_frame"/>
+    <child link="${name}_left_camera_optical_frame"/>
+  </joint>
+
+  <!-- ── Right camera ── -->
+  <link name="${name}_right_camera_frame">
+    <xacro:inertial_dummy/>
+  </link>
+  <joint name="${name}_right_camera_joint" type="fixed">
+    <parent link="${base_frame}"/>
+    <child link="${name}_right_camera_frame"/>
+    <origin xyz="0 -${baseline/2} 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="${name}_right_camera_optical_frame">
+    <xacro:inertial_dummy/>
+  </link>
+  <joint name="${name}_right_camera_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-${M_PI/2} 0.0 -${M_PI/2}"/>
+    <parent link="${name}_right_camera_frame"/>
+    <child link="${name}_right_camera_optical_frame"/>
+  </joint>
+
+  <!-- ── IMU ── -->
+  <link name="${name}_imu_link">
+    <xacro:inertial_dummy/>
+  </link>
+  <joint name="${name}_imu_joint" type="fixed">
+    <parent link="${base_frame}"/>
+    <child link="${name}_imu_link"/>
+    <origin xyz="0 0 0" rpy="-${M_PI/2} 0 -${M_PI/2}"/>
+  </joint>
+
+  <!-- ── Gazebo RGBD sensor on left camera ── -->
+  <xacro:if value="${gazebo == 'ignition'}">
+    <gazebo reference="${name}_left_camera_frame">
+      <sensor name="${name}_rgbd" type="rgbd_camera">
+        <camera>
+          <!-- ZED 2i H-FOV ~110 deg = 1.92 rad -->
+          <horizontal_fov>1.9199</horizontal_fov>
+          <image>
+            <width>672</width>
+            <height>376</height>
+          </image>
+          <clip>
+            <near>0.2</near>
+            <far>20.0</far>
+          </clip>
+          <optical_frame_id>${name}_left_camera_optical_frame</optical_frame_id>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+      </sensor>
+      <xacro:material_darkgray/>
+    </gazebo>
+  </xacro:if>
+
+  <!-- preserveFixedJoint for every joint -->
+  <gazebo reference="${name}_joint">                        <preserveFixedJoint>true</preserveFixedJoint> </gazebo>
+  <gazebo reference="${name}_left_camera_joint">            <preserveFixedJoint>true</preserveFixedJoint> </gazebo>
+  <gazebo reference="${name}_left_camera_optical_joint">    <preserveFixedJoint>true</preserveFixedJoint> </gazebo>
+  <gazebo reference="${name}_right_camera_joint">           <preserveFixedJoint>true</preserveFixedJoint> </gazebo>
+  <gazebo reference="${name}_right_camera_optical_joint">   <preserveFixedJoint>true</preserveFixedJoint> </gazebo>
+  <gazebo reference="${name}_imu_joint">                    <preserveFixedJoint>true</preserveFixedJoint> </gazebo>
+
+</xacro:macro>
+</robot>

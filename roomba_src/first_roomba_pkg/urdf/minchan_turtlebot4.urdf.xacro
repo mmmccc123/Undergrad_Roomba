@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<robot name="turtlebot4" xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- Use 'classic' as default to satisfy the base model's logic -->
+  <xacro:arg name="gazebo" default="classic"/>
+  
+  <xacro:include filename="$(find irobot_create_description)/urdf/common_properties.urdf.xacro" />
+  <!-- Base -->
+  <xacro:include filename="$(find irobot_create_description)/urdf/create3.urdf.xacro" />
+
+  <!-- Swap in new sensors -->
+  <xacro:include filename="$(find first_roomba_pkg)/urdf/sensors/unilidar_l2.urdf.xacro" />
+  <xacro:include filename="$(find first_roomba_pkg)/urdf/sensors/zed.urdf.xacro" />
+  <xacro:include filename="$(find turtlebot4_description)/urdf/sensors/camera_bracket.urdf.xacro" />
+
+  <!-- ── Offsets ── -->
+  <!-- Keep lidar at same z as rplidar was -->
+  <xacro:property name="lidar_x_offset"   value="${0.393584*cm2m}"/>
+  <xacro:property name="lidar_y_offset"   value="${0*cm2m}"/>
+  <xacro:property name="lidar_z_offset"   value="${7.529272*cm2m}"/>
+
+
+
+  <!-- Camera bracket same as before -->
+  <xacro:property name="camera_mount_x_offset" value="${-9*cm2m}"/>
+  <xacro:property name="camera_mount_y_offset" value="${0*cm2m}"/>
+  <xacro:property name="camera_mount_z_offset" value="${2.914772*cm2m}"/>
+
+  <!-- ZED is slightly taller/deeper than OAK-D Lite; adjust z if needed -->
+  <xacro:property name="zed_x_offset"     value="${5.294026*cm2m}"/>
+  <xacro:property name="zed_y_offset"     value="${0*cm2m}"/>
+  <xacro:property name="zed_z_offset"     value="${9.5*cm2m}"/>
+
+  <!-- ── Sensor instantiation ── -->
+
+  <xacro:unilidar_l2 name="unilidar_l2" parent_link="base_link" gazebo="$(arg gazebo)">
+    <origin xyz="${lidar_x_offset} ${lidar_y_offset} ${lidar_z_offset + base_link_z_offset}"
+            rpy="0 0 ${pi/2}"/>
+  </xacro:unilidar_l2>
+
+  <xacro:camera_bracket name="zed_camera_bracket" parent_link="base_link">
+    <origin xyz="${camera_mount_x_offset} ${camera_mount_y_offset} ${camera_mount_z_offset + base_link_z_offset}"/>
+  </xacro:camera_bracket>
+
+  <xacro:zed_camera name="zed" model="zed2" parent_link="zed_camera_bracket" gazebo="$(arg gazebo)">
+    <origin xyz="${zed_x_offset} ${zed_y_offset} ${zed_z_offset}"/>
+  </xacro:zed_camera>
+
+</robot>

@@ -19,8 +19,7 @@ class CameraNode(Node):
         self.last_save_time = time.time()
 
         # ── Subscribers ──────────────────────────────────────────────────────
-        self.create_subscription
-        (
+        self.create_subscription(
             Image,
             '/zed/zed_node/left/image_rect_color',
             self.image_callback,
