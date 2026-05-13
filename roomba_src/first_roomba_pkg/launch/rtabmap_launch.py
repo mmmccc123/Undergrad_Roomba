@@ -4,7 +4,7 @@ import os
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PythonExpression
+from launch.substitutions import LaunchConfiguration, PythonExpression, PathJoinSubstitution
 from launch.conditions import IfCondition
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
@@ -19,7 +19,7 @@ from launch_ros.actions import Node, SetRemap
 import os
 import subprocess
 
-
+from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
 
@@ -75,6 +75,13 @@ def generate_launch_description():
             'publish_tf':   'false',
             'publish_map_tf': 'false',
             'publish_urdf': 'false',
+
+            # --- USE THESE STRINGS TO LIGHTEN THE LOAD ---
+            'grab_resolution': 'VGA',        # Lowest resolution (672x376)
+            'grab_frame_rate': '15',         # Lowest frame rate
+            'depth_mode': 'PERFORMANCE',     # Changes math from heavy to light
+            'ros_params_override_path': '',  # Ensure no other config is overriding this
+            # ----------------------------------
         }.items(),
         condition=IfCondition(PythonExpression(["'", is_sim, "' == 'false'"]))
     )
@@ -126,35 +133,100 @@ def generate_launch_description():
     rgb_topic = PythonExpression(["'/zed/image_raw' if '", is_sim, "' == 'true' else '/zed/zed_node/left/image_rect_color'"])
     # Note: Depth/Info usually need matching remappings in the bridge to work flawlessly in sim
     
-    rtabmap_node = Node(
-        package='rtabmap_slam',
-        executable='rtabmap',
-        name='rtabmap',
-        output='screen',
-        parameters=[{
-            'use_sim_time': use_sim_time,
-            'Mem/IncrementalMemory': PythonExpression(
-                ['"false" if "', localization, '" == "true" else "true"']
-            ),
-            'Mem/InitWMWithAllNodes':  localization,
-            'subscribe_depth':         'true',
-            'subscribe_scan_cloud':    'true',
-            'subscribe_scan':          'false',
-            'frame_id':                'base_link',
-            'odom_frame_id':           'odom',
-            'Rtabmap/DetectionRate':   '1.0',
-            'Kp/MaxFeatures':          '500',
-            'RGBD/ProximityBySpace':   'true',
-            'database_path':           '/media/wolfwagen1/c9c2a9fe-c435-4115-9237-57bc783cf964/rtabmap.db',
-        }],
-        remappings=[
-            ('rgb/image',       rgb_topic),
-            ('rgb/camera_info', '/zed/zed_node/left/camera_info'),
-            ('depth/image',     '/zed/zed_node/depth/depth_registered'),
-            ('odom',            '/zed/zed_node/odom'),
-            ('scan_cloud',      '/unilidar/cloud'),
-        ],
+    # rtabmap_node = Node(
+    #     package='rtabmap_launch',
+    #     executable='rtabmap.launch.py',
+    #     name='rtabmap',
+    #     output='screen',
+    #     parameters=[{
+    #         'use_sim_time': use_sim_time,
+    #         'Mem/IncrementalMemory': PythonExpression( ['"false" if "', localization, '" == "true" else "true"'] ),
+    #         'Mem/InitWMWithAllNodes':  localization,
+    #         'subscribe_depth':         'true',
+    #         'subscribe_scan_cloud':    'true',
+    #         'subscribe_scan':          'false',
+    #         'frame_id':                'base_link',
+    #         'odom_frame_id':           'odom',
+    #         'approx_sync':             'true',  # CRITICAL for syncing ZED + LiDAR
+    #         'Rtabmap/DetectionRate':   '1.0',
+    #         'database_path':           '/media/wolfwagen1/c9c2a9fe-c435-4115-9237-57bc783cf964/rtabmap.db',
+
+    #         # Performance Tweaks for your setup
+    #         'RGBD/ProximityBySpace': 'true',
+    #         'RGBD/AngularUpdate':    '0.01',
+    #         'RGBD/LinearUpdate':     '0.01',
+    #         'Grid/FromDepth':        'false', # Set to false to use LiDAR for the 2D Map instead of ZED
+    #         'Grid/RayTracing':       'true',
+    #         'Kp/MaxFeatures':        '500',
+
+    #     }],
+    #     remappings=[
+    #         ('rgb/image',       rgb_topic),
+    #         ('rgb/camera_info', '/zed/zed_node/left/camera_info'),
+    #         ('depth/image',     '/zed/zed_node/depth/depth_registered'),
+    #         ('odom',            '/zed/zed_node/odom'),
+    #         ('scan_cloud',      '/unilidar/cloud'),
+    #     ],
+    #     arguments=['-d'] # This deletes the database on every start (optional)
+    # )
+
+
+
+
+# 1. Setup Configurations
+    use_sim_time = LaunchConfiguration('use_sim_time')
+    localization = LaunchConfiguration('localization')
+
+    # 2. Define the exact arguments from your Node setup
+    # These are passed to the included rtabmap.launch.py
+    rtabmap_args = {
+        'use_sim_time': use_sim_time,
+        'localization': localization,
+        'frame_id': 'base_link',
+        'odom_frame_id': 'odom',
+        'subscribe_depth': 'true',
+        'subscribe_scan_cloud': 'true',
+        'subscribe_scan': 'false',
+        'approx_sync': 'true',
+        'wait_for_transform': '0.2',
+        'database_path': '/media/wolfwagen1/c9c2a9fe-c435-4115-9237-57bc783cf964/rtabmap.db',
+        
+        # Topic Remappings (ZED and UniLiDAR)
+        'rgb_topic': '/zed/zed_node/rgb/image_rect_color',
+        'depth_topic': '/zed/zed_node/depth/depth_registered',
+        'camera_info_topic': '/zed/zed_node/left/camera_info',
+        'odom_topic': '/zed/zed_node/odom',
+        'scan_cloud_topic': '/unilidar/cloud',
+        
+        # Performance/Library Parameters
+        # Note: We pass these as a single string to 'rtabmap_args' 
+        # because the official launch file injects them into the node
+        'rtabmap_args': [
+            '--delete_db_on_start ', # This is your '-d' argument
+            '--RGBD/ProximityBySpace true ',
+            '--RGBD/AngularUpdate 0.01 ',
+            '--RGBD/LinearUpdate 0.01 ',
+            '--Grid/FromDepth false ',
+            '--Grid/RayTracing true ',
+            '--Kp/MaxFeatures 500 ',
+            '--Rtabmap/DetectionRate 1.0'
+        ]
+    }
+
+    # 3. Include the official rtabmap_launch file
+    included_rtabmap = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            PathJoinSubstitution([
+                FindPackageShare('rtabmap_launch'),
+                'launch',
+                'rtabmap.launch.py'
+            ])
+        ]),
+        launch_arguments=rtabmap_args.items()
     )
+
+
+
 
 
 
@@ -210,16 +282,16 @@ def generate_launch_description():
         is_sim_arg,           # <-- Added this
         localization_arg,
         rviz_arg,
-        
         joy_node,
         xbox_node,
         # driver_node,
         # namespaced_tf_group
-        # rtabmap_node,
         custom_robot_description, # <--- YOUR XACRO IS NOW LIVE HERE
         zed_launch,
         unitree_launch,
         rviz_node,
         lidar_root_tf,
         # lidar_node,
+        # rtabmap_node,
+        # included_rtabmap
     ])
