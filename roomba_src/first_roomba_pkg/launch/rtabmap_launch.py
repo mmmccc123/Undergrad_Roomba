@@ -287,7 +287,7 @@ def generate_launch_description():
         # driver_node,
         # namespaced_tf_group
         custom_robot_description, # <--- YOUR XACRO IS NOW LIVE HERE
-        zed_launch,
+        # zed_launch,
         unitree_launch,
         rviz_node,
         lidar_root_tf,
