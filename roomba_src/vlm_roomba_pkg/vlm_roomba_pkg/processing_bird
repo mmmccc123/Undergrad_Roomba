@@ -1,0 +1,268 @@
+#!/usr/bin/env python3
+
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Image
+from geometry_msgs.msg import Twist
+from cv_bridge import CvBridge
+import cv2 as cv
+import requests
+import base64
+import re
+import time
+import tempfile
+import os
+import json
+import math
+import numpy as np
+frame_buffer = []          # raw OpenCV frames
+BUFFER_SIZE = 8           # how many frames to accumulate
+
+with open("/home/wolfwagen/Minchan_dir/image_file2/wo_image0.png","rb") as i:
+    base_brid_eye_img =  base64.b64encode(i.read()).decode('utf-8')
+
+
+def image_callback(msg: Image):
+    global latest_frame
+    tmp = br.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+    _, buffer  = cv.imencode(".jpg",tmp)
+    latest_frame = base64.b64encode(buffer).decode('utf-8')
+    
+    # Keep a rolling buffer of raw frames for video assembly
+    frame_buffer.append(latest_frame) # copy..?
+    if len(frame_buffer) > BUFFER_SIZE:
+        frame_buffer.pop(0)
+
+
+def parse_and_publish_velocity(text: str):
+    twist = Twist()
+
+    # 1. Try to extract text after </think> tag (Cosmos-Reason2 format)
+    think_match = re.search(r'</think>\s*(.*)', text, re.IGNORECASE | re.DOTALL)
+    if think_match:
+        decision = think_match.group(1).strip().lower()
+    else:
+        # 2. Fallback: try <answer> tag (old format)
+        answer_match = re.search(r'<answer>(.*?)</answer>', text, re.IGNORECASE)
+        decision = answer_match.group(1).strip().lower() if answer_match else text.strip().lower()
+
+    node_logger.info(f"Parsed decision: [{decision}]")
+
+    if "go straight" in decision:
+        twist.linear.x = 0.2
+        twist.angular.z = 0.0
+    elif "turn left" in decision:
+        twist.linear.x = 0.1
+        twist.angular.z = 0.4
+    elif "turn right" in decision:
+        twist.linear.x = 0.1
+        twist.angular.z = -0.4
+    elif "stop" in decision:
+        twist.linear.x = 0.0
+        twist.angular.z = 0.0
+    else:
+        node_logger.warn(f"No valid decision parsed from: [{decision}]")
+        twist.linear.x = 0.0
+        twist.angular.z = 0.0
+
+    cmd_vel_pub.publish(twist)
+
+
+def write_coor_image(use_frame , output_file_name , json_output  = "" ):
+
+    img_byte = base64.b64decode(use_frame)
+    np_arr = np.frombuffer(img_byte,np.uint8)
+    image = cv.imdecode( np_arr ,cv.IMREAD_COLOR)
+
+    if image is None:
+        print("Error: Could not decode the image.")
+        return
+    if json_output :
+        marker_color = (0,255,255)
+        line_color = (0,255,255)
+        text_color  = (0,0,0)
+        line_thickness = 2
+        font = cv.FONT_HERSHEY_SIMPLEX
+
+        img_height, img_width = image.shape[:2]
+        max_x = 1000
+        max_y = 1000
+
+        json_match = re.search(r'\[\s*\{.*?\}\s*\]', json_output, re.DOTALL)
+
+        coor  =  json.loads(json_match.group(0))
+        points = [ item['point_2d'] for item in coor ]
+        prev = None
+
+        for i, p  in enumerate(points):
+            x,y = int(p[0] * (img_width / max_x) ), int(p[1] * ( img_height / max_x) )
+            current = (x,y)
+            idx = str(i+1)
+            
+            if prev != None:
+                cv.line(image , prev , current , line_color, line_thickness)
+
+
+            size = 10
+            triangle_cnt = np.array([(x,y-size),(x-size , y+size ),(x+size ,y+size )])
+            cv.drawContours(image , [triangle_cnt], 0 , marker_color , -1)
+
+            cv.putText(image, idx , (x-5 , y+8),font , 0.6 , text_color , 2 ,cv.LINE_AA)
+            prev = current
+        
+    
+    cv.imwrite(output_file_name , image)
+    print("stored at:" +output_file_name )
+
+
+
+gemini = ('You are controlling a ground robot.'
+          'You are given the navigation task: "Go straight, turn left in front of the blue brick, and stop in front of the red brick." '
+          'Specify the 2D trajectory the robot should follow in the current camera view in pixel space.'
+          'Return the trajectory coordinates in JSON format like this: {"point_2d": [x, y], "label": "navigation waypoint"}.')
+
+
+
+
+gemini2 = ('You are controlling a ground robot.'
+            'You are given the navigation task:'
+            'go forward and when you reach around the blue brick, turn left untill you see red brick. '
+            'When you face the red brick. go forward to red brick.'
+            'when you reach around the blue brick, you are done. '
+            'Specify the 2D trajectory the robot should follow in the current camera view in pixel space.'
+            'Return the trajectory coordinates in JSON format like this: {"point_2d": [x, y], "label": "navigation waypoint"}.')
+
+
+
+
+gemini3 = ('You are controlling a ground robot.'
+            'You are given the navigation task:'
+            'Follow the yellow line'
+            'Specify the 2D trajectory the robot should follow in the current camera view in pixel space.'
+            'Return the trajectory coordinates in JSON format like this: {"point_2d": [x, y], "label": "navigation waypoint"}.')
+
+
+previous_prompt = ("You are controlling a robot .\n"
+                   "your task is go straight and turn left in front of the blue brick and stop in front of the red brick.\n"
+                   "Respond with ONLY one of: go straight, turn left, turn right, stop\n"
+                   "No explanation. One phrase only.\n")
+
+finetuning_prompt = ("You start with facing the blue brick." 
+                     "go forward and when you reach around the blue brick, turn left. untill you see red brick. "
+                     "When you face the red brick. go forward to red brick."
+                     "when you reach around the blue brick, you are done. "
+                     "'Return the output one of four choices : go straight or turn left or turn right or stop ")
+                    # "Choices: [go straight, turn left, turn right, stop] "
+
+
+
+bird_prompt =      ("You are controlling a robot "
+                    "you are given two image. one is bird eye view, and another is your current view "
+                    "based on these images, assume your locationa and do the task "
+                    'You are given the navigation task:'
+                    'go forward and when you reach around the blue brick, turn left untill you see red brick. '
+                    'When you face the red brick. go forward to red brick.'
+                    'when you reach around the blue brick, you are done. '
+                    "'Return the output one of four choices : go straight or turn left or turn right or stop ")
+
+
+
+reasoning_prompt = ("Answer the question using the following format:\n\n"
+                    "<think>\n"
+                    "Your reasoning.\n"
+                    "</think>\n\n"
+                    "Write your final answer immediately after the </think> tag.")
+
+TIME_OUT = 10
+image_idx = 0
+
+
+
+def vlm_inference_loop():
+    global TIME_OUT
+    global image_idx 
+    if latest_frame is None :
+        node_logger.info(" no fame in the buffer")
+        return
+    try:
+        use_franme = latest_frame
+        payload = {
+            "model": "/models/cosmos-reason2-8b",
+            "messages": [
+                {    
+                    "role": "system",
+                    "content": [{"type": "text", "text": "You are a helpful assistant."}]
+                },
+
+                {
+                    "role": "user",
+                    "content": [
+                        #bird eye view
+                        {
+                            "type":     "image_url",
+                            "image_url":  {"url": f"data:image/jpeg;base64,{base_brid_eye_img}"}
+                        },
+
+                        {
+                            "type":     "image_url",
+                            "image_url":  {"url": f"data:image/jpeg;base64,{use_franme}"}
+                        },
+                        {
+                            "type":     "text",
+                            "text":      finetuning_prompt
+                        }
+                    ]
+                }
+            ],
+            "max_tokens": 4090 #4096 
+        }
+        response = requests.post(
+            "http://localhost:8000/v1/chat/completions",
+            json=payload,
+            timeout=None
+        )
+
+        if response.status_code == 200:
+            message = response.json()['choices'][0]['message']
+            node_logger.info(f" adsad: {message}")
+            result_text = message.get('content') or message.get('reasoning_content') or ""
+            node_logger.info(f"Cosmos Output: {result_text}")
+            parse_and_publish_velocity(result_text)
+            image_idx +=1
+        else:
+            node_logger.error(f"vLLM Error {response.status_code}: {response.text}")
+
+    except Exception as e:
+        node_logger.error(f"VLM loop failed: {str(e)}")
+
+
+
+br = CvBridge()
+latest_frame = None
+cmd_vel_pub = None
+node_logger = None
+start_time = time.time()
+
+
+def main(args=None):
+
+    global cmd_vel_pub, node_logger, TIME_OUT
+    rclpy.init(args=args)
+    node = Node("VLM_process_node")
+    node.create_subscription(Image, '/zed/zed_node/rgb/color/rect/image', image_callback, 1)
+    cmd_vel_pub = node.create_publisher(Twist, '/cmd_vel', 10)
+    node_logger = node.get_logger()
+    node.create_timer(TIME_OUT, vlm_inference_loop)
+
+    node_logger.info("Start")
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
