@@ -1,0 +1,358 @@
+#!/usr/bin/env python3
+
+import rclpy
+from rclpy.node import Node
+from sensor_msgs.msg import Image
+from geometry_msgs.msg import Twist
+from cv_bridge import CvBridge
+import cv2 as cv
+import requests
+import base64
+import re
+import time
+import tempfile
+import os
+import json
+import math
+import numpy as np
+
+import sys
+import threading 
+
+sys.path.append("/")
+from agent.tools import * 
+# from agent.agentic_loop_tool import *
+
+
+frame_buffer = []          # raw OpenCV frames
+BUFFER_SIZE = 8           # how many frames to accumulate
+
+with open("/Undergrad_Roomba/roomba_src/vlm_roomba_pkg/vlm_roomba_pkg/wo_image3.png","rb") as i:
+    base6_img =  base64.b64encode(i.read()).decode('utf-8')
+
+
+def image_callback(msg: Image):
+    global latest_frame
+    tmp = br.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+    _, buffer  = cv.imencode(".jpg",tmp)
+    latest_frame = base64.b64encode(buffer).decode('utf-8')
+    
+    # Keep a rolling buffer of raw frames for video assembly
+    frame_buffer.append(latest_frame) # copy..?
+    if len(frame_buffer) > BUFFER_SIZE:
+        frame_buffer.pop(0)
+
+
+
+gemini = ('You are controlling a ground robot.'
+          'You are given the navigation task: "Go straight, turn left in front of the blue brick, and stop in front of the red brick." '
+          'Specify the 2D trajectory the robot should follow in the current camera view in pixel space.'
+          'Return the trajectory coordinates in JSON format like this: {"point_2d": [x, y], "label": "navigation waypoint"}.')
+
+
+
+
+gemini2 = ('You are controlling a ground robot.'
+            'You are given the navigation task:'
+            'go forward and when you reach around the blue brick, turn left untill you see red brick. '
+            'When you face the red brick. go forward to red brick.'
+            'when you reach around the blue brick, you are done. '
+            'Specify the 2D trajectory the robot should follow in the current camera view in pixel space.'
+            'Return the trajectory coordinates in JSON format like this: {"point_2d": [x, y], "label": "navigation waypoint"}.')
+
+
+
+
+gemini3 = ('You are controlling a ground robot.'
+            'You are given the navigation task:'
+            'Follow the yellow line'
+            'Specify the 2D trajectory the robot should follow in the current camera view in pixel space.'
+            'Return the trajectory coordinates in JSON format like this: {"point_2d": [x, y], "label": "navigation waypoint"}.')
+
+
+
+finetuning_prompt = ("You start with facing the blue brick." 
+                     "go forward and when you reach around the blue brick, turn left. untill you see red brick. "
+                     "When you face the red brick. go forward to red brick."
+                     "when you reach around the blue brick, you are done. " )
+
+
+
+bird_prompt =      ("You are controlling a robot "
+                    "you are given two image. one is bird eye view, and another is your current view "
+                    "based on these images, assume your locationa and do the task "
+                    'You are given the navigation task:'
+                    'go forward and when you reach around the blue brick, turn left untill you see red brick. '
+                    'When you face the red brick. go forward to red brick.'
+                    'when you reach around the blue brick, you are done. '
+                    "'Return the output one of four choices : go straight or turn left or turn right or stop ")
+
+
+
+my_prompt =  ("You start with facing the blue brick." 
+            "go forward to the blue and when you reach near the blue brick, turn left untill you see red brick. "
+            "When you face the red brick. go forward to red brick."
+            "when you reach near the red brick, you are done. " )
+
+
+def vlm_inference_loop(payload):
+
+    
+    try:
+
+        response = requests.post( "http://localhost:8000/v1/chat/completions",json=payload, timeout=None )
+
+        if response.status_code == 200:
+            # node_logger.info(f" full json: { response.json()}")
+
+            asnwer = response.json()['choices'][0]['message'].get('content') or ""
+            fucntion_call = response.json()['choices'][0]['message'].get('fucntion_call') or ""
+            tool_calls = response.json()['choices'][0]['message'].get('tool_calls') or ""
+            usage = response.json()['usage'] or ""
+
+
+            # print("="*150)
+            # node_logger.info(f"asnwer: {asnwer}")
+            # node_logger.info(f"fucntion_call: {fucntion_call}")
+            # node_logger.info(f"tool_calls: {tool_calls}")
+            # node_logger.info(f"usage: {usage}")
+            
+            asnwer = re.search(r'</think>\s*(.*)', asnwer, re.IGNORECASE | re.DOTALL)
+            if asnwer:
+                asnwer = asnwer.group(1).strip().lower()
+            else:
+                pass
+
+            return (f"COSMOS OUTPUT : {asnwer}") , fucntion_call , tool_calls , usage
+
+
+        else:
+            node_logger.error(f"vLLM Error {response.status_code}: {response.text}")
+            return (f"vLLM Error {response.status_code}: {response.text}")
+
+    except Exception as e:
+        node_logger.error(f"VLM loop failed: {str(e)}")
+        return (f"VLM loop failed: {str(e)}")
+
+
+
+
+
+breakdown_prompt1 = ( "\n\nBreak this navigation instruction into sequential sub-instructions. "
+                    "Separate each sub-instruction with a comma. "
+                    "Each sub-instruction must follow this structure:\n"
+                    "  - Use 'if [visual condition], then [action]' for decision points\n"
+                    "  - Use 'while [condition], [action]' for continuous actions\n"
+                    "  - Use 'until [condition], [action]' for goal-directed movement\n"
+                    "The condition should always describe something visually observable. "
+                    "The action should be a single, atomic movement command. "
+                    "Do not combine multiple actions in one sub-instruction.")
+
+
+
+breakdown_prompt2 = ("\n\nBreak this navigation instruction into sequential sub-instructions. "
+                    "Separate each sub-instruction with a comma. "
+                    "Each sub-instruction must follow this exact format:\n"
+                    "  'ACTION: [single movement command] | "
+                    "DONE WHEN: [visible condition that signals this step is complete] | "
+                    # "NEXT STATE: [what the agent should be facing or near after completion]'\n"
+                    "Rules:\n"
+                    "  - ACTION must be a single atomic movement (forward, turn left, stop, etc.)\n"
+                    "  - DONE WHEN must be a visually observable condition\n"
+                    # "  - NEXT STATE must describe the agent's visual context for the next sub-instruction\n"
+                    "  - Do not combine multiple actions in one sub-instruction.\n"
+                    "  - Return the output in list format like this: '[ 'first sub-task' , 'second sub-task' .. etc]' \n "
+                       )
+
+
+MAX_LOOP = 20
+
+class agentic_class():
+    def __init__(self ):
+        self.sub_instruction_list = []
+        self.max_loop = 0
+
+    def break_sub_instruction(self  ):
+
+        self.prompt = (my_prompt + breakdown_prompt2 )
+
+        self.pay  =         make_payload(self.prompt ,image_url = None, reasoning = True)
+        self.inst,a,b,c =   vlm_inference_loop(self.pay)
+        self.inst =         self.inst.split(":", 1)[1].strip() # strip OUTPUT:
+        print("im here")
+        print(self.inst)
+
+
+        try:
+            print("im try")
+            self.inst = json.loads(self.inst)
+            assert isinstance(self.inst , list) 
+            self.sub_instruction_list = self.inst
+            print(self.sub_instruction_list)
+
+        #if the output form is not what i expect, run break_sub_instruction again 
+        except : 
+            print("im except")
+            self.max_loop += 1
+            print(f"LOOP NUM : {self.max_loop} ")
+            self.break_sub_instruction()
+        if self.max_loop == 10:
+            return  
+
+
+
+    def checking_stop(self, sub_prompt , image_url , reasoning= False):
+        global retrn
+        retrn = None
+
+        self.prompt = ("your task is checking if the gieve image is :") 
+        #  "    call next instruction fucntion "  
+         #" and if you think vehicle has to stop, call stop fucntion. Do not call another fucntion")
+        self.cont_or_not  = make_payload( self.prompt + sub_prompt.split("done when: ")[1]  ,image_url = image_url, reasoning = True , calling_tools = False)
+        content , function_call, tool_call, usage = vlm_inference_loop( self.cont_or_not )
+        
+        print("="*40)
+        print(content)
+        print(function_call)
+        print(tool_call)
+        # if retrn == True:
+        #     print(" Vehicel have to do next step ")        
+        # else:
+        #     print(" Vehicel have to do current step more")
+
+        print("="*40)
+
+        return content.split(":", 1)[1].strip() 
+
+
+    def agentic_loop(self):
+        total_loop_max_num = 0 
+        # doing each sub-task 
+        while total_loop_max_num <  50 :                        # number for total loop
+            for sub_prompt in self.sub_instruction_list:
+                
+                for instruction_max_num in range(MAX_LOOP):     # think like while loop. do untill a instruction get done 
+                
+                    if latest_frame is None :
+                        node_logger.info(" no frame in the buffer")
+                        # return (" no frame in the buffer")
+
+
+                    use_franme = latest_frame
+                    url  = f"data:image/jpeg;base64,{use_franme}"
+
+                    
+                    print("sub prompt: " , sub_prompt)
+                    defaut_prompt = "your task is calling proper function based on this task: "
+                    payload  =  make_payload(defaut_prompt + sub_prompt , image_url = base6_img  ,reasoning= True , calling_tools = True)
+                    content , function_call, tool_call, usage = vlm_inference_loop(payload) # call movement fuction
+                    print(content)
+                    print(function_call)
+                    print(tool_call)
+
+                    total_loop_max_num += 1
+
+                    # check if need to continue or stop
+                    contin  =  self.checking_stop(sub_prompt , image_url = base6_img  ,reasoning= False) # test mode use instead of use frame 
+                    if "no" in contin  or "None" in contin or "False" in contin :
+                        print("break1")
+                        break
+                        print("break2")
+
+
+                    elif "yes" in contin  or "True" in contin:
+                        pass
+                    else:
+                        pass
+
+                    # if for function call
+                    # if retrn == True:
+                    #     break
+
+
+
+# ====================================================================
+def move_robot(decision: str):
+
+    twist = Twist()
+    if "go straight" in decision:
+        twist.linear.x = 0.2
+        twist.angular.z = 0.0
+    elif "turn left" in decision:
+        twist.linear.x = 0.1
+        twist.angular.z = 0.4
+    elif "turn right" in decision:
+        twist.linear.x = 0.1
+        twist.angular.z = -0.4
+    else:
+        twist.linear.x = 0.0
+        twist.angular.z = 0.0
+        node_logger.warn(f"No valid decision parsed from: [{decision}]")
+
+    cmd_vel_pub.publish(twist)
+    return f"Robot moving {direction}"
+
+def stop_robot():
+    twist = Twist()
+    cmd_vel_pub.publish(twist)
+    return "Robot stopped"
+
+
+# idk if vlm loop call  fucntiopn. who gets the return value. go i just used global var
+retrn = None
+def next_task():
+    global retrn  
+    retrn  = True 
+    return retrn
+# ====================================================================
+
+
+
+
+
+
+
+
+br = CvBridge()
+latest_frame = None
+cmd_vel_pub = None
+node_logger = None
+start_time = time.time()
+
+
+def main(args=None):
+
+    global cmd_vel_pub, node_logger
+    loop_time = 1
+
+    # initialize and create, subscibe node
+    rclpy.init(args=args)
+    node = Node("VLM_process_node")
+    node.create_subscription(Image, '/zed/zed_node/rgb/color/rect/image', image_callback, 1)
+    cmd_vel_pub = node.create_publisher(Twist, '/cmd_vel', 10)
+    node_logger = node.get_logger()
+
+    # node.create_timer( loop_time, vlm_inference_loop)
+    agent  = agentic_class()
+    spin_thread = threading.Thread(target=rclpy.spin, args=(node,), daemon=True)
+    spin_thread.start()
+
+    node_logger.info("Start")
+    try:
+
+        # 1 . break down the instruction
+        agent.break_sub_instruction()
+
+        # 2. make agentic loop with given sub task
+        agent.agentic_loop()  # im worring about it blocking node working
+
+    except KeyboardInterrupt:
+        pass
+
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
